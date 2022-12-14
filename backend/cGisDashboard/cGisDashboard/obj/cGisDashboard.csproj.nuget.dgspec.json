@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Projetos\\Celtica\\cGis-Dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj": {}
+    "F:\\Projetos\\Celtica\\cgis-dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj": {}
   },
   "projects": {
-    "F:\\Projetos\\Celtica\\cGis-Dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj": {
+    "F:\\Projetos\\Celtica\\cgis-dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Projetos\\Celtica\\cGis-Dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj",
+        "projectUniqueName": "F:\\Projetos\\Celtica\\cgis-dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj",
         "projectName": "cGisDashboard",
-        "projectPath": "F:\\Projetos\\Celtica\\cGis-Dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj",
+        "projectPath": "F:\\Projetos\\Celtica\\cgis-dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj",
         "packagesPath": "C:\\Users\\welli\\.nuget\\packages\\",
-        "outputPath": "F:\\Projetos\\Celtica\\cGis-Dashboard\\backend\\cGisDashboard\\cGisDashboard\\obj\\",
+        "outputPath": "F:\\Projetos\\Celtica\\cgis-dashboard\\backend\\cGisDashboard\\cGisDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,6 +1,8 @@
 ﻿using cGisDashboard.Entities;
 using cGisDashboard.Enums;
+using cGisDashboard.Profiles.Mapping;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace cGisDashboard.Helpers
 {
@@ -24,6 +26,12 @@ namespace cGisDashboard.Helpers
                     );
         }*/
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.ApplyConfiguration(new UserResponseMapping());
+        }
         public DbSet<User> Users { get; set; }
 
         public DbSet<UserProfile> UserProfiles { get; set; }

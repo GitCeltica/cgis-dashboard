@@ -17,7 +17,7 @@ namespace cGisDashboard.Dto
         public string Token { get; set; }
 
 
-        public AuthenticateResponse(User user, string token)
+        public AuthenticateResponse(Entities.User user, string token)
         {
             Id = user.Id;
             FirstName = user.FirstName;

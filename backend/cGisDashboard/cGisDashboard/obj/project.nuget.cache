@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BUvKSwos6Rfo/sT8w/Ad/+uEvJInqluxUUjRlLLthIgy1Bb1oKl3j9pXFRJ6hKGh777mCV8FCTDFvA+WIjIZdw==",
+  "dgSpecHash": "Ps7dobQ2Ik9ZVs4zrHVrl8c2ZKVIKFVaq6F61VT86p74W+L06R+MbNqvm4Yvoq2jO4CWyoGaShHQu6W9dHTUeA==",
   "success": true,
-  "projectFilePath": "F:\\Projetos\\Celtica\\cGis-Dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj",
+  "projectFilePath": "F:\\Projetos\\Celtica\\cgis-dashboard\\backend\\cGisDashboard\\cGisDashboard\\cGisDashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\welli\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

@@ -1,4 +1,6 @@
-﻿using cGisDashboard.Entities;
+﻿using cGisDashboard.Dto;
+using cGisDashboard.Dto.User;
+using cGisDashboard.Entities;
 using cGisDashboard.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,8 +19,14 @@ namespace cGisDashboard.Controllers
             _service = service;
         }
 
+        [HttpPost("Authenticate")]
+        public async Task<IActionResult> Authenticate([FromBody] AuthenticateRequest request)
+        {
+            return Ok(await _service.Authenticate(request));
+        }
+
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] User user)
+        public async Task<IActionResult> Create([FromBody] UserRequest user)
         {
             return  Ok(await _service.Create(user));
         }

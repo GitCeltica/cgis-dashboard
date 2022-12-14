@@ -11,6 +11,8 @@ namespace cGisDashboard.Repository
 
         public Task<User> GetById(int id);
 
+        public Task<User> GetByUserName(string userName);
+
         public Task<List<User>> GetAll();
 
         public Task Update(User userIn, int Id);
@@ -73,6 +75,18 @@ namespace cGisDashboard.Repository
             }
 
             return userDb;
+        }
+
+        public async Task<User> GetByUserName(string userName)
+        {
+            User user = await _context.Users.SingleOrDefaultAsync(u => u.UserName == userName);
+
+            if (user is null)
+            {
+                throw new Exception($"User {userName} não foi encontrado");
+            }
+
+            return user;
         }
 
         public async Task Update(User userIn, int id)
