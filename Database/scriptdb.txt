@@ -1,12 +1,13 @@
-
+DROP TABLE Users;
 
 CREATE TABLE Users(Id int IDENTITY(1,1) NOT NULL,
 	           FirstName Varchar(30) NOT NULL,
 	           LastName varchar(255) NOT NULL,
 		   Username varchar(255) NOT NULL,
-		   Password varchar(255),
-		   Type INT,
-		   created_at DATETIME,
-		   updated_at DATETIME,
+		   PasswordHash varbinary(max),
+		   PasswordSalt varbinary(max),
+		   TypeUser INT,
+		   createdAt DATETIME2,
+		   updatedAt DATETIME2,
 		   PRIMARY KEY(Id)
 		)

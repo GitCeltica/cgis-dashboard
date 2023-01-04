@@ -6,7 +6,7 @@ namespace cGisDashBoard.Repositories.Interfaces
 {
     public interface IAuthRepository
     {
-        public Task<User> CreateUser(User user);
-        public Task<User> GetUser(string username);
+        public Task<Usuario> CreateUser(Usuario user);
+        public Task<Usuario> GetUser(string username);
     }
 }

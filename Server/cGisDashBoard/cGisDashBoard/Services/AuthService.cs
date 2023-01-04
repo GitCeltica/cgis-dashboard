@@ -31,7 +31,7 @@ namespace cGisDashBoard.Services
 
         }
 
-        private bool VerifyPassworHash(string Password, User user)
+        private bool VerifyPassworHash(string Password, Usuario user)
         {
             using(var hmac = new HMACSHA512(user.PasswordSalt))
             {
@@ -47,7 +47,7 @@ namespace cGisDashBoard.Services
             UserResponse response = new UserResponse();
 
             
-            User user = await _repository.GetUser(login.Username);
+            Usuario user = await _repository.GetUser(login.Username);
 
             if (user == null) 
             {
@@ -68,7 +68,7 @@ namespace cGisDashBoard.Services
             return response;
         }
 
-        private string CreateToken(User user)
+        private string CreateToken(Usuario user)
         {
             List<Claim> claims = new List<Claim>
             {
@@ -89,15 +89,15 @@ namespace cGisDashBoard.Services
 
             return jwt;
         }
-        public async Task<User> Register(UserRegister register)
+        public async Task<Usuario> Register(UserRegister register)
         {
 
-            User user = new User();
+            Usuario user = new Usuario();
 
             CreatePasswordHash(register.Password, out byte[] PasswordHash, out byte[] PasswordSalt);
 
-            user.FirstName = register.FirstName;
-            user.LastName= register.LastName;
+            user.PrimeiroNome = register.FirstName;
+            user.UltimoNome= register.LastName;
             user.Username = register.Username;
             user.PasswordSalt = PasswordSalt;
             user.PasswordHash = PasswordHash;

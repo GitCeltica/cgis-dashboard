@@ -17,9 +17,9 @@ namespace cGisDashBoard.Repositories
             _context = context;
         }
 
-        public async Task<User> CreateUser(User user)
+        public async Task<Usuario> CreateUser(Usuario user)
         {
-            User dbResult = await _context.Users
+            Usuario dbResult = await _context.Usuarios
                 .AsNoTracking()
                 .SingleOrDefaultAsync(x => x.Username == user.Username);
 
@@ -28,17 +28,17 @@ namespace cGisDashBoard.Repositories
                 throw new Exception($"{user.Username} already exists");
             }
 
-            _context.Users.Add(user);
+            _context.Usuarios.Add(user);
 
             await _context.SaveChangesAsync();
 
             return user;
         }
 
-        public async Task<User> GetUser(string username)
+        public async Task<Usuario> GetUser(string username)
         {
 
-            var dbResult  = await _context.Users
+            var dbResult  = await _context.Usuarios
                 .AsNoTracking()
                 .SingleOrDefaultAsync(x => x.Username == username);
 

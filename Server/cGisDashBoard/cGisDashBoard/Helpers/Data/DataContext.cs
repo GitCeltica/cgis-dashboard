@@ -10,8 +10,8 @@ namespace cGisDashBoard.Helpers.Data
         { 
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
-        public DbSet<IndicadoresVazamento> IndicadoresVazamentos { get; set; }
+        public DbSet<IndicadoresPerda> IndicadoresPerdas { get; set; }
     }
 }
