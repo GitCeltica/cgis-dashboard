@@ -1,0 +1,39 @@
+
+
+SELECT * FROM CIDADES
+
+select * from IndicadoresPerdas
+
+select * from users
+
+alter table IndicadoresPerdas 
+	add  Updated_At Datetime2
+
+alter table IndicadoresPerdas
+drop column Created_At
+
+alter table IndicadoresPerdas
+drop column Updated_At
+
+alter table IndicadoresPerdas 
+	add  DataCriacao Datetime2 DEFAULT GETDATE()
+
+alter table IndicadoresPerdas 
+	add  DataAtualizacao Datetime2 DEFAULT GETDATE()
+
+
+DROP TABLE Usuarios;
+
+CREATE TABLE Usuarios(Id int IDENTITY(1,1) NOT NULL,
+	           PrimeiroNome Varchar(255) NOT NULL,
+	           UltimoNome varchar(255) NOT NULL,
+		   Username varchar(255) NOT NULL,
+		   PasswordHash varbinary(max),
+		   PasswordSalt varbinary(max),
+		   TipoUsuario INT,
+		   DataCriacao DATETIME2,
+		   DataAtualizacao DATETIME2,
+		   PRIMARY KEY(Id)
+		)
+
+		SELECT * FROM USUARIOS 
