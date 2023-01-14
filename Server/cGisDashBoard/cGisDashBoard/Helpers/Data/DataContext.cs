@@ -1,4 +1,5 @@
 ﻿using cGisDashBoard.Models.Entities;
+using cGisDashBoard.Repositories.Indicadores;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 
@@ -15,5 +16,12 @@ namespace cGisDashBoard.Helpers.Data
         public DbSet<IndicadoresPerda> IndicadoresPerdas { get; set; }
 
         public DbSet<IndicadoresDadosTecnicos> IndicadoresDadosTecnicos { get; set; }
+
+        public DbSet<IndicadoresConsumo> IndicadoresConsumo { get; set; }
+
+        public DbSet<IndicadoresLigacoes> IndicadoresLigacoes { get; set; }
+
+        public DbSet<IndicadoresOrdemServico> IndicadoresOrdemServico { get; set; }
+
     }
 }

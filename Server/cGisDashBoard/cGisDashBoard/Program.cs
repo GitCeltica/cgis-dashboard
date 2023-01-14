@@ -1,5 +1,6 @@
 using cGisDashBoard.Helpers.Auth;
 using cGisDashBoard.Helpers.Data;
+using cGisDashBoard.Models.Entities;
 using cGisDashBoard.Repositories;
 using cGisDashBoard.Repositories.Indicadores;
 using cGisDashBoard.Repositories.Interfaces;
@@ -44,12 +45,18 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IHomeRepository, HomeRepository>();
 builder.Services.AddScoped<IIndicadoresRepository, IndicadoresRepository>();
 builder.Services.AddScoped<IDadosTecnicosRepository, DadosTecnicosRepository>();
+builder.Services.AddScoped<IDadosConsumoRepository, DadosConsumoRepository>();
+builder.Services.AddScoped<IDadosLigacoesRepository, DadosLigacoesRepository>();
+builder.Services.AddScoped<IIndicadoresOrdemServicoRepository, IndicadoresOrdemServicoRepository>();
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IHomeService, HomeService>();
 builder.Services.AddScoped<IIndicadoresService, IndicadoresService>();
 builder.Services.AddScoped<IDadosTecnicosService, DadosTecnicosService>();
+builder.Services.AddScoped<IDadosConsumoService, DadosConsumoService>();
+builder.Services.AddScoped<IDadosLigacoesService, DadosLigacoesService>();
+builder.Services.AddScoped<IOrdemServicosService, OrdemServicosService>();
 
 builder.Services.AddSingleton<IIndicadoresWorkerService, IndicadoresWorkerService>();
 

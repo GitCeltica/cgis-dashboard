@@ -1,9 +1,12 @@
-﻿using cGisDashBoard.Models.Entities;
+﻿using cGisDashBoard.Models.DTOs.IndicadorPerdas;
+using cGisDashBoard.Models.Entities;
 
 namespace cGisDashBoard.Services.Interfaces.Indicadores
 {
-    public interface IDadosTecnicosService
+    public interface IOrdemServicosService
     {
-        public Task<List<IndicadoresDadosTecnicos>> GetAll();
+        public Task<List<IndicadoresOrdemServico>> GetAll();
+        public Task<List<IndicadoresOrdemServico>> ObterPorCidade(int cidadeId);
+        public Task<List<IndicadoresOrdemServico>> ObterPorFiltro(ParametrosIndicadorOS parametros);
     }
 }

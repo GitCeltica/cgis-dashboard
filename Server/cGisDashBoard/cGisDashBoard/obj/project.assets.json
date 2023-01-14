@@ -2227,24 +2227,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\welli\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Elisa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Celtica\\2023\\Janeiro\\14-B\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
+      "projectUniqueName": "C:\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
       "projectName": "cGisDashBoard",
-      "projectPath": "F:\\Celtica\\2023\\Janeiro\\14-B\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
-      "packagesPath": "C:\\Users\\welli\\.nuget\\packages\\",
-      "outputPath": "F:\\Celtica\\2023\\Janeiro\\14-B\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\obj\\",
+      "projectPath": "C:\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
+      "packagesPath": "C:\\Users\\Elisa\\.nuget\\packages\\",
+      "outputPath": "C:\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\welli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Elisa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
