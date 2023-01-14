@@ -52,7 +52,7 @@ namespace cGisDashBoard.Repositories
                 resultado = dados.Where(x => x.Mes == parametros.Mes).ToList();
             }
 
-            if (parametros.Regiao is not null)
+            if (parametros.Regiao != "")
             {
                 resultado = dados.Where(x => x.Regiao == parametros.Regiao).ToList();
             }

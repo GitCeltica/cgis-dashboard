@@ -23,6 +23,18 @@ builder.Services.AddHostedService<BackgroundWorkerService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          builder.WithOrigins("*");
+                      });
+});
+
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
     builder => builder.EnableRetryOnFailure()));
 
@@ -42,6 +54,8 @@ builder.Services.AddScoped<IDadosTecnicosService, DadosTecnicosService>();
 builder.Services.AddSingleton<IIndicadoresWorkerService, IndicadoresWorkerService>();
 
 var app = builder.Build();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -39,7 +39,7 @@ namespace cGisDashBoard.Workers
                 _logger.LogInformation($" Username: {result.Username} Worker running at {DateTime.Now}");
 
                 //await Task.Delay(60000, stoppingToken); //1 minuto
-                await Task.Delay(5000, stoppingToken); //5 seg
+                await Task.Delay(1000000000, stoppingToken); //5 seg
             }
         }
     }

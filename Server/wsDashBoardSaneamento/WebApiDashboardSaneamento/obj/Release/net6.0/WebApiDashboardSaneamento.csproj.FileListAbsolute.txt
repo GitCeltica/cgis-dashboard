@@ -1,0 +1,123 @@
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\appsettings.Development.json
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\appsettings.json
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.exe
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.deps.json
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.runtimeconfig.json
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\ref\WebApiDashboardSaneamento.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.pdb
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.Identity.Client.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Drawing.Common.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Runtime.Caching.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Security.Permissions.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Windows.Extensions.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.csproj.AssemblyReference.cache
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.AssemblyInfoInputs.cache
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.AssemblyInfo.cs
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.csproj.CoreCompileInputs.cache
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\scopedcss\bundle\WebApiDashboardSaneamento.styles.css
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.csproj.CopyComplete
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\ref\WebApiDashboardSaneamento.dll
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.pdb
+C:\Users\NOTEBRAZ\source\repos\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.genruntimeconfig.cache
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\appsettings.Development.json
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\appsettings.json
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.exe
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.deps.json
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.runtimeconfig.json
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\WebApiDashboardSaneamento.pdb
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.Identity.Client.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.OpenApi.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Drawing.Common.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Runtime.Caching.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Security.Permissions.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\System.Windows.Extensions.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.csproj.AssemblyReference.cache
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.GeneratedMSBuildEditorConfig.editorconfig
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.AssemblyInfoInputs.cache
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.AssemblyInfo.cs
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.csproj.CoreCompileInputs.cache
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.MvcApplicationPartsAssemblyInfo.cs
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.MvcApplicationPartsAssemblyInfo.cache
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\staticwebassets\msbuild.WebApiDashboardSaneamento.Microsoft.AspNetCore.StaticWebAssets.props
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\staticwebassets\msbuild.build.WebApiDashboardSaneamento.props
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApiDashboardSaneamento.props
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.WebApiDashboardSaneamento.props
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\staticwebassets.pack.json
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\staticwebassets.build.json
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\staticwebassets.development.json
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\scopedcss\bundle\WebApiDashboardSaneamento.styles.css
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.csproj.CopyComplete
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\refint\WebApiDashboardSaneamento.dll
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.pdb
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\WebApiDashboardSaneamento.genruntimeconfig.cache
+F:\Celtica\2023\Dashboard Saneamento\wsDashBoardSaneamento\WebApiDashboardSaneamento\obj\Release\net6.0\ref\WebApiDashboardSaneamento.dll

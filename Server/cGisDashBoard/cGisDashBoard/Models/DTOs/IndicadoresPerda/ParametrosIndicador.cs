@@ -8,6 +8,6 @@
 
         public int Ano { get; set; }
 
-        public string? Regiao { get; set; } = string.Empty; 
+        public string Regiao { get; set; } 
     }
 }

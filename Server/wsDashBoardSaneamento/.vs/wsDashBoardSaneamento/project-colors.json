@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "59a98c06-faec-4ec7-857d-bcebbd6d4724": {
+      "ProjectGuid": "59a98c06-faec-4ec7-857d-bcebbd6d4724",
+      "DisplayName": "wsDashBoardSaneamento",
+      "ColorIndex": 0
+    },
+    "2a149027-2991-48cf-bbab-29b620504622": {
+      "ProjectGuid": "2a149027-2991-48cf-bbab-29b620504622",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 1
+    },
+    "503ae70d-063e-4667-ba28-86a873e49567": {
+      "ProjectGuid": "503ae70d-063e-4667-ba28-86a873e49567",
+      "DisplayName": "WebApiDashboardSaneamento",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
