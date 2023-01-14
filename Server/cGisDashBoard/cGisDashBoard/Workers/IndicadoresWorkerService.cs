@@ -90,6 +90,10 @@ namespace cGisDashBoard.Workers
 
                 // user.Username ="Economia Domiciliar" + tipoEconomia[0].Domiciliar.ToString();
 
+                decimal consumoDomiciliar = GetConsumoMedioDomiciliar(conn);
+
+                user.Username = "consumo domiciliar:" + consumoDomiciliar.ToString();
+
                 connDestino.Open();
                 //cmd = new SqlCommand($"INSERT INTO  Teste(Inteiro, Texto) VALUES({nosEsgoto[0].Quantidade}, '{nosEsgoto[0].Tipo}')", connDestino);
 
@@ -410,6 +414,39 @@ namespace cGisDashBoard.Workers
             }
             return tipoEconomia;
 
+        }
+
+        public decimal GetConsumoMedioDomiciliar(SqlConnection conOrigem)
+        {
+            decimal result;
+            List<decimal> list = new List<decimal>();
+            string strCommand = "select AVG(ConsumoMedio) as consumo From Cliente where EconomiaDomiciliar > 0;";
+
+            SqlCommand cmd = new SqlCommand(strCommand, conOrigem);
+            SqlDataReader dataReader = null;
+
+            try
+            {
+                dataReader= cmd.ExecuteReader();
+
+                while(dataReader.Read())
+                {
+                    result = (decimal)dataReader["consumo"];
+                    list.Add(result);
+                }
+            }catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                if(dataReader !=null)
+                { 
+                    dataReader.Close(); 
+                }
+            }
+
+            return list[0];
         }
         private static void CreateCommand(string queryString,
     string connectionString)
