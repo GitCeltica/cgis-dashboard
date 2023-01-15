@@ -47,7 +47,8 @@ builder.Services.AddScoped<IIndicadoresRepository, IndicadoresRepository>();
 builder.Services.AddScoped<IDadosTecnicosRepository, DadosTecnicosRepository>();
 builder.Services.AddScoped<IDadosConsumoRepository, DadosConsumoRepository>();
 builder.Services.AddScoped<IDadosLigacoesRepository, DadosLigacoesRepository>();
-builder.Services.AddScoped<IIndicadoresOrdemServicoRepository, IndicadoresOrdemServicoRepository>();
+builder.Services.AddScoped<IOrdemServicoRepository, IndicadoresOrdemServicoRepository>();
+builder.Services.AddScoped<IOrdemServicoRankingRepository, OrdemServicoRankingRepository>();
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
@@ -57,6 +58,7 @@ builder.Services.AddScoped<IDadosTecnicosService, DadosTecnicosService>();
 builder.Services.AddScoped<IDadosConsumoService, DadosConsumoService>();
 builder.Services.AddScoped<IDadosLigacoesService, DadosLigacoesService>();
 builder.Services.AddScoped<IOrdemServicosService, OrdemServicosService>();
+builder.Services.AddScoped<IOrdemServicoRankingService, OrdemServicoRankingService>();
 
 builder.Services.AddSingleton<IIndicadoresWorkerService, IndicadoresWorkerService>();
 

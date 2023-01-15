@@ -6,26 +6,26 @@ using cGisDashBoard.Services.Interfaces.Indicadores;
 
 namespace cGisDashBoard.Services.Indicadores
 {
-    public class OrdemServicosService : IOrdemServicosService
+    public class OrdemServicoRankingService : IOrdemServicoRankingService
     {
-        private readonly IOrdemServicoRepository _repository;
+        private readonly IOrdemServicoRankingRepository _repository;
 
-        public OrdemServicosService(IOrdemServicoRepository repository)
+        public OrdemServicoRankingService(IOrdemServicoRankingRepository repository)
         {
             _repository = repository;
         }
-        public async Task<List<IndicadoresOrdemServico>> GetAll()
+        public async Task<List<IndicadoresOrdemServicoRanking>> GetAll()
         {
             
             return await _repository.GetAll();
         }
 
-        public async Task<List<IndicadoresOrdemServico>> ObterPorCidade(int cidadeId)
+        public async Task<List<IndicadoresOrdemServicoRanking>> ObterPorCidade(int cidadeId)
         {
             return await _repository.ObterPorCidade(cidadeId);
         }
 
-        public async Task<List<IndicadoresOrdemServico>> ObterPorFiltro(ParametrosIndicadorOS parametros)
+        public async Task<List<IndicadoresOrdemServicoRanking>> ObterPorFiltro(ParametrosIndicadorOS parametros)
         {
             return await _repository.ObterPorFiltro(parametros);
         }

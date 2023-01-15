@@ -6,34 +6,34 @@ using Microsoft.EntityFrameworkCore;
 
 namespace cGisDashBoard.Repositories.Indicadores
 {
-    public class IndicadoresOrdemServicoRepository : IOrdemServicoRepository
+    public class OrdemServicoRankingRepository : IOrdemServicoRankingRepository
     {
         private readonly DataContext _context;
 
-        public IndicadoresOrdemServicoRepository(DataContext context)
+        public OrdemServicoRankingRepository(DataContext context)
         {
             _context = context;
         }
-        public async Task<List<IndicadoresOrdemServico>> GetAll()
+        public async Task<List<IndicadoresOrdemServicoRanking>> GetAll()
         {
             
-            return await _context.IndicadoresOrdemServico.ToListAsync();
+            return await _context.IndicadoresOrdemServicoRanking.ToListAsync();
             
         }
 
-        public async Task<List<IndicadoresOrdemServico>> ObterPorCidade(int cidadeId)
+        public async Task<List<IndicadoresOrdemServicoRanking>> ObterPorCidade(int cidadeId)
         {
-            var result = await _context.IndicadoresOrdemServico.Where(x => x.CidadeId == cidadeId).ToListAsync();
+            var result = await _context.IndicadoresOrdemServicoRanking.Where(x => x.CidadeId == cidadeId).ToListAsync();
 
             return result;
 
         }
 
-        public async Task<List<IndicadoresOrdemServico>> ObterPorFiltro(ParametrosIndicadorOS parametros)
+        public async Task<List<IndicadoresOrdemServicoRanking>> ObterPorFiltro(ParametrosIndicadorOS parametros)
         {
-            var dados = await _context.IndicadoresOrdemServico.ToListAsync();
+            var dados = await _context.IndicadoresOrdemServicoRanking.ToListAsync();
 
-            List<IndicadoresOrdemServico> resultado = new List<IndicadoresOrdemServico>();
+            List<IndicadoresOrdemServicoRanking> resultado = new List<IndicadoresOrdemServicoRanking>();
 
 
             if (parametros.CidadeId != 0)
@@ -53,12 +53,12 @@ namespace cGisDashBoard.Repositories.Indicadores
 
             if (parametros.Natureza != "")
             {
-                resultado = dados.Where(x => x.Natureza == parametros.Natureza).ToList();
+                resultado = dados.Where(x => x.Natureza == parametros.Natureza).ToList(); //.OrderByDescending(x => x.Quantidade).Take(5).ToList()
             }
 
             if (parametros.Equipe != "")
             {
-                resultado = dados.Where(x => x.Equipe == parametros.Equipe).ToList();
+                resultado = dados.Where(x => x.Equipe == parametros.Equipe).ToList(); //.OrderByDescending(x => x.Quantidade).Take(5).ToList()
             }
 
             return resultado;

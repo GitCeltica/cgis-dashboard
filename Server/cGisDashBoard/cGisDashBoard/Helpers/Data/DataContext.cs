@@ -23,5 +23,7 @@ namespace cGisDashBoard.Helpers.Data
 
         public DbSet<IndicadoresOrdemServico> IndicadoresOrdemServico { get; set; }
 
+        public DbSet<IndicadoresOrdemServicoRanking> IndicadoresOrdemServicoRanking { get; set; }
+        
     }
 }

@@ -1,10 +1,9 @@
 ﻿using cGisDashBoard.Models.DTOs.IndicadorPerdas;
 using cGisDashBoard.Models.Entities;
-using cGisDashBoard.Repositories.Indicadores;
 
 namespace cGisDashBoard.Repositories.Interfaces.Indicadores
 {
-    public interface IIndicadoresOrdemServicoRepository
+    public interface IOrdemServicoRepository
     {
         public Task<List<IndicadoresOrdemServico>> GetAll();
 

@@ -3,10 +3,10 @@ using cGisDashBoard.Models.Entities;
 
 namespace cGisDashBoard.Services.Interfaces.Indicadores
 {
-    public interface IDadosTecnicosService
+    public interface IOrdemServicosService
     {
-        public Task<List<IndicadoresDadosTecnicos>> GetAll();
-        public Task<List<IndicadoresDadosTecnicos>> ObterPorCidade(int cidadeId);
-        public Task<List<IndicadoresDadosTecnicos>> ObterPorFiltro(ParametrosIndicador parametros);
+        public Task<List<IndicadoresOrdemServico>> GetAll();
+        public Task<List<IndicadoresOrdemServico>> ObterPorCidade(int cidadeId);
+        public Task<List<IndicadoresOrdemServico>> ObterPorFiltro(ParametrosIndicadorOS parametros);
     }
 }
