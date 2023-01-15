@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj": {}
+    "C:\\Celtica\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj": {}
   },
   "projects": {
-    "C:\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj": {
+    "C:\\Celtica\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
+        "projectUniqueName": "C:\\Celtica\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
         "projectName": "cGisDashBoard",
-        "projectPath": "C:\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
-        "packagesPath": "C:\\Users\\Elisa\\.nuget\\packages\\",
-        "outputPath": "C:\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\obj\\",
+        "projectPath": "C:\\Celtica\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
+        "packagesPath": "C:\\Users\\NOTEBRAZ\\.nuget\\packages\\",
+        "outputPath": "C:\\Celtica\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Elisa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NOTEBRAZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
