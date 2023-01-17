@@ -43,22 +43,22 @@ namespace cGisDashBoard.Repositories.Indicadores
 
             if (parametros.Ano != 0)
             {
-                resultado = dados.Where(x => x.Ano == parametros.Ano).ToList();
+                resultado = resultado.Where(x => x.Ano == parametros.Ano).ToList();
             }
 
             if (parametros.Mes != 0)
             {
-                resultado = dados.Where(x => x.Mes == parametros.Mes).ToList();
+                resultado = resultado.Where(x => x.Mes == parametros.Mes).ToList();
             }
 
             if (parametros.Natureza != "")
             {
-                resultado = dados.Where(x => x.Natureza == parametros.Natureza).ToList(); //.OrderByDescending(x => x.Quantidade).Take(5).ToList()
+                resultado = resultado.Where(x => x.Natureza == parametros.Natureza).ToList(); //.OrderByDescending(x => x.Quantidade).Take(5).ToList()
             }
 
             if (parametros.Equipe != "")
             {
-                resultado = dados.Where(x => x.Equipe == parametros.Equipe).ToList(); //.OrderByDescending(x => x.Quantidade).Take(5).ToList()
+                resultado = resultado.Where(x => x.Equipe == parametros.Equipe).ToList(); //.OrderByDescending(x => x.Quantidade).Take(5).ToList()
             }
 
             return resultado;

@@ -43,17 +43,17 @@ namespace cGisDashBoard.Repositories.Indicadores
 
             if (parametros.Ano != 0)
             {
-                resultado = dados.Where(x => x.Ano == parametros.Ano).ToList();
+                resultado = resultado.Where(x => x.Ano == parametros.Ano).ToList();
             }
 
             if (parametros.Mes != 0)
             {
-                resultado = dados.Where(x => x.Mes == parametros.Mes).ToList();
+                resultado = resultado.Where(x => x.Mes == parametros.Mes).ToList();
             }
 
             if (parametros.Regiao != "")
             {
-                resultado = dados.Where(x => x.Regiao == parametros.Regiao).ToList();
+                resultado = resultado.Where(x => x.Regiao == parametros.Regiao).ToList();
             }
 
             return resultado;
