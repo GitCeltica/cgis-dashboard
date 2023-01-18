@@ -1,4 +1,6 @@
-﻿using cGisDashBoard.Models.Entities;
+﻿using cGisDashBoard.Models.DTOs.IndicadoresPerda;
+using cGisDashBoard.Models.Entities;
+using cGisDashBoard.Models.Mapping.Indicadores;
 using cGisDashBoard.Repositories.Indicadores;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
@@ -9,6 +11,15 @@ namespace cGisDashBoard.Helpers.Data
     {
         public DataContext(DbContextOptions<DataContext> options): base(options) 
         { 
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new PerdasAnoMapping());
+            modelBuilder.ApplyConfiguration(new PerdasRegiaoMapping());
+
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
@@ -24,6 +35,10 @@ namespace cGisDashBoard.Helpers.Data
         public DbSet<IndicadoresOrdemServico> IndicadoresOrdemServico { get; set; }
 
         public DbSet<IndicadoresOrdemServicoRanking> IndicadoresOrdemServicoRanking { get; set; }
+
+        public DbSet<PerdasAno> PerdasAnos { get; set; }
+
+        public DbSet<PerdasRegiao> PerdasRegioes { get; set; }
         
     }
 }

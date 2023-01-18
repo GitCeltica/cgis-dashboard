@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Celtica\\2023\\Janeiro\\cgis-dashboard\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj": {}
+    "F:\\Celtica\\2023\\Janeiro\\18-A\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj": {}
   },
   "projects": {
-    "F:\\Celtica\\2023\\Janeiro\\cgis-dashboard\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj": {
+    "F:\\Celtica\\2023\\Janeiro\\18-A\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Celtica\\2023\\Janeiro\\cgis-dashboard\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
+        "projectUniqueName": "F:\\Celtica\\2023\\Janeiro\\18-A\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
         "projectName": "cGisDashBoard",
-        "projectPath": "F:\\Celtica\\2023\\Janeiro\\cgis-dashboard\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
+        "projectPath": "F:\\Celtica\\2023\\Janeiro\\18-A\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
         "packagesPath": "C:\\Users\\welli\\.nuget\\packages\\",
-        "outputPath": "F:\\Celtica\\2023\\Janeiro\\cgis-dashboard\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\obj\\",
+        "outputPath": "F:\\Celtica\\2023\\Janeiro\\18-A\\Server\\cGisDashBoard\\cGisDashBoard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

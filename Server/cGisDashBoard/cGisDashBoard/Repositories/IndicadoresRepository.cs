@@ -1,4 +1,5 @@
 ﻿using cGisDashBoard.Helpers.Data;
+using cGisDashBoard.Models.DTOs.IndicadoresPerda;
 using cGisDashBoard.Models.DTOs.IndicadorPerdas;
 using cGisDashBoard.Models.Entities;
 using cGisDashBoard.Repositories.Interfaces;
@@ -20,6 +21,30 @@ namespace cGisDashBoard.Repositories
         public async Task<List<IndicadoresPerda>> GetAll()
         {
             return await _context.IndicadoresPerdas.ToListAsync();
+        }
+
+        public async Task<DadosFiltro> ObterDadosFiltro(int cidadeId)
+        {
+
+            DadosFiltro result = new DadosFiltro();
+
+            var anos = await _context.PerdasAnos.FromSqlRaw("select distinct Ano from IndicadoresPerdas").ToListAsync();
+
+            var regioes = await _context.PerdasRegioes.FromSqlRaw("select distinct Regiao from IndicadoresPerdas").ToListAsync();
+
+
+            foreach(var item in anos)
+            {
+                result.Ano.Add(item.Ano);
+            }
+
+
+            foreach (var item in regioes)
+            {
+                result.Regioes.Add(item.Regiao);
+            }
+
+            return result;
         }
 
         public async Task<List<IndicadoresPerda>> ObterPorCidade(int cidadeId)
@@ -62,5 +87,7 @@ namespace cGisDashBoard.Repositories
 
             return resultado;
         }
+
+
     }
 }

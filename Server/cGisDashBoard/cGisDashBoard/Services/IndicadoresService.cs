@@ -1,4 +1,5 @@
-﻿using cGisDashBoard.Models.DTOs.IndicadorPerdas;
+﻿using cGisDashBoard.Models.DTOs.IndicadoresPerda;
+using cGisDashBoard.Models.DTOs.IndicadorPerdas;
 using cGisDashBoard.Models.Entities;
 using cGisDashBoard.Repositories.Interfaces;
 using cGisDashBoard.Services.Interfaces;
@@ -17,6 +18,11 @@ namespace cGisDashBoard.Services
         public async Task<List<IndicadoresPerda>> GetAll()
         {
             return  await _repository.GetAll();
+        }
+
+        public async Task<DadosFiltro> ObterDadosFiltro(int cidadeId)
+        {
+            return await _repository.ObterDadosFiltro(cidadeId);
         }
 
         public async Task<List<IndicadoresPerda>> ObterPorCidade(int cidadeId)
