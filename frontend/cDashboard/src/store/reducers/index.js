@@ -8,6 +8,7 @@ const INITIAL_STATE = {
         mes: '0'
     }
 };
+    
 
 function filtrar( state = INITIAL_STATE, action) {
     switch (action.type) {
