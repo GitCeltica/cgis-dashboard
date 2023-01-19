@@ -1,6 +1,8 @@
-﻿using cGisDashBoard.Models.DTOs.IndicadoresPerda;
+﻿using cGisDashBoard.Models.DTOs.IndicadoresDadosTecnicos;
+using cGisDashBoard.Models.DTOs.IndicadoresPerda;
 using cGisDashBoard.Models.Entities;
 using cGisDashBoard.Models.Mapping.Indicadores;
+using cGisDashBoard.Models.Mapping.IndicadoresDadosTecnicos;
 using cGisDashBoard.Repositories.Indicadores;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
@@ -19,6 +21,8 @@ namespace cGisDashBoard.Helpers.Data
 
             modelBuilder.ApplyConfiguration(new PerdasAnoMapping());
             modelBuilder.ApplyConfiguration(new PerdasRegiaoMapping());
+
+            modelBuilder.ApplyConfiguration(new DadosTecnicosFiltroPorAnoMapping());
 
         }
 
@@ -39,6 +43,8 @@ namespace cGisDashBoard.Helpers.Data
         public DbSet<PerdasAno> PerdasAnos { get; set; }
 
         public DbSet<PerdasRegiao> PerdasRegioes { get; set; }
+
+        public DbSet<DadosTecnicosAno> DadosTecnicosAnos { get; set; }
         
     }
 }

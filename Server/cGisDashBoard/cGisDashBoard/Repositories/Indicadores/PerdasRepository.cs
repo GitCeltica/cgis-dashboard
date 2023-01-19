@@ -2,18 +2,18 @@
 using cGisDashBoard.Models.DTOs.IndicadoresPerda;
 using cGisDashBoard.Models.DTOs.IndicadorPerdas;
 using cGisDashBoard.Models.Entities;
-using cGisDashBoard.Repositories.Interfaces;
+using cGisDashBoard.Repositories.Interfaces.Indicadores;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
-namespace cGisDashBoard.Repositories
+namespace cGisDashBoard.Repositories.Indicadores
 {
-    public class IndicadoresRepository: IIndicadoresRepository
+    public class PerdasRepository : IPerdasRepository
     {
         private readonly DataContext _context;
 
 
-        public IndicadoresRepository(DataContext context)
+        public PerdasRepository(DataContext context)
         {
             _context = context;
         }
@@ -28,12 +28,12 @@ namespace cGisDashBoard.Repositories
 
             DadosFiltro result = new DadosFiltro();
 
-            var anos = await _context.PerdasAnos.FromSqlRaw("select distinct Ano from IndicadoresPerdas").ToListAsync();
+            var anos = await _context.PerdasAnos.FromSqlRaw($"select distinct Ano from IndicadoresPerdas where cidadeId = {cidadeId}").ToListAsync();
 
-            var regioes = await _context.PerdasRegioes.FromSqlRaw("select distinct Regiao from IndicadoresPerdas").ToListAsync();
+            var regioes = await _context.PerdasRegioes.FromSqlRaw($"select distinct Regiao from IndicadoresPerdas where cidadeId = {cidadeId}").ToListAsync();
 
 
-            foreach(var item in anos)
+            foreach (var item in anos)
             {
                 result.Ano.Add(item.Ano);
             }
@@ -61,7 +61,7 @@ namespace cGisDashBoard.Repositories
 
             List<IndicadoresPerda> resultado = new List<IndicadoresPerda>();
 
-            
+
             if (parametros.CidadeId != 0)
             {
                 resultado = dados.Where(x => x.CidadeId == parametros.CidadeId).ToList();
@@ -82,7 +82,7 @@ namespace cGisDashBoard.Repositories
             if (parametros.Regiao != "")
             {
                 //resultado = dados.Where(x => x.Regiao == parametros.Regiao).ToList();
-                resultado = resultado.Where(x => x.Regiao== parametros.Regiao).ToList();
+                resultado = resultado.Where(x => x.Regiao == parametros.Regiao).ToList();
             }
 
             return resultado;

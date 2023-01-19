@@ -2,9 +2,9 @@
 using cGisDashBoard.Models.DTOs.IndicadorPerdas;
 using cGisDashBoard.Models.Entities;
 
-namespace cGisDashBoard.Repositories.Interfaces
+namespace cGisDashBoard.Repositories.Interfaces.Indicadores
 {
-    public interface IIndicadoresRepository
+    public interface IPerdasRepository
     {
         public Task<List<IndicadoresPerda>> GetAll();
 

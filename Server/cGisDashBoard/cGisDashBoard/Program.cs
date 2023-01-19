@@ -9,8 +9,6 @@ using cGisDashBoard.Services;
 using cGisDashBoard.Services.Indicadores;
 using cGisDashBoard.Services.Interfaces;
 using cGisDashBoard.Services.Interfaces.Indicadores;
-using cGisDashBoard.Workers;
-using cGisDashBoard.Workers.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,7 +17,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddHostedService<BackgroundWorkerService>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -43,7 +40,7 @@ builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(build
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IHomeRepository, HomeRepository>();
-builder.Services.AddScoped<IIndicadoresRepository, IndicadoresRepository>();
+builder.Services.AddScoped<IPerdasRepository, PerdasRepository>();
 builder.Services.AddScoped<IDadosTecnicosRepository, DadosTecnicosRepository>();
 builder.Services.AddScoped<IDadosConsumoRepository, DadosConsumoRepository>();
 builder.Services.AddScoped<IDadosLigacoesRepository, DadosLigacoesRepository>();
@@ -53,14 +50,13 @@ builder.Services.AddScoped<IOrdemServicoRankingRepository, OrdemServicoRankingRe
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IHomeService, HomeService>();
-builder.Services.AddScoped<IIndicadoresService, IndicadoresService>();
+builder.Services.AddScoped<IPerdasService, PerdasService>();
 builder.Services.AddScoped<IDadosTecnicosService, DadosTecnicosService>();
 builder.Services.AddScoped<IDadosConsumoService, DadosConsumoService>();
 builder.Services.AddScoped<IDadosLigacoesService, DadosLigacoesService>();
 builder.Services.AddScoped<IOrdemServicosService, OrdemServicosService>();
 builder.Services.AddScoped<IOrdemServicoRankingService, OrdemServicoRankingService>();
 
-builder.Services.AddSingleton<IIndicadoresWorkerService, IndicadoresWorkerService>();
 
 var app = builder.Build();
 

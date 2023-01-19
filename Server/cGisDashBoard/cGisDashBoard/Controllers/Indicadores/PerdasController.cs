@@ -1,16 +1,16 @@
 ﻿using cGisDashBoard.Models.DTOs.IndicadorPerdas;
-using cGisDashBoard.Services.Interfaces;
+using cGisDashBoard.Services.Interfaces.Indicadores;
 using Microsoft.AspNetCore.Mvc;
 
-namespace cGisDashBoard.Controllers
+namespace cGisDashBoard.Controllers.Indicadores
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class IndicadoresController : ControllerBase
+    public class PerdasController : ControllerBase
     {
-        private readonly IIndicadoresService _service;
+        private readonly IPerdasService _service;
 
-        public IndicadoresController(IIndicadoresService service)
+        public PerdasController(IPerdasService service)
         {
             _service = service;
         }

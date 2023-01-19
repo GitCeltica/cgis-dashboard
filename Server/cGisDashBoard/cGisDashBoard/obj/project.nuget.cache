@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7Vz0lESChO0My6r3HuVtyPiNXIrc69QywBFqArbga/pzeSTGYcEtNlnGkNIEJGEUiQMENot00nUxIHIPe7lfCQ==",
+  "dgSpecHash": "JuRyhJlopwGt5sLSB5JLepR1UPsPF7Y3yzr9d4Eal+AbeY4Bo1X2xoefWSCCEH7zAocG1n7spTgg+vvji/BWKA==",
   "success": true,
-  "projectFilePath": "F:\\Celtica\\2023\\Janeiro\\18-A\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
+  "projectFilePath": "F:\\Celtica\\2023\\Janeiro\\18-B\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\welli\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

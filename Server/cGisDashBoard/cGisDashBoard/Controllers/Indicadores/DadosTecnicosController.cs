@@ -39,5 +39,14 @@ namespace cGisDashBoard.Controllers.Indicadores
 
             return Ok(result);
         }
+
+        [HttpGet]
+        [Route("Filtro/{cidadeId}")]
+        public async Task<IActionResult> ObterDadosFiltro([FromRoute] int cidadeId)
+        {
+            var result = await _service.ObterDadosFiltro(cidadeId);
+
+            return Ok(result);
+        }
     }
 }

@@ -1,23 +1,23 @@
 ﻿using cGisDashBoard.Models.DTOs.IndicadoresPerda;
 using cGisDashBoard.Models.DTOs.IndicadorPerdas;
 using cGisDashBoard.Models.Entities;
-using cGisDashBoard.Repositories.Interfaces;
-using cGisDashBoard.Services.Interfaces;
+using cGisDashBoard.Repositories.Interfaces.Indicadores;
+using cGisDashBoard.Services.Interfaces.Indicadores;
 
-namespace cGisDashBoard.Services
+namespace cGisDashBoard.Services.Indicadores
 {
-    public class IndicadoresService: IIndicadoresService
+    public class PerdasService : IPerdasService
     {
-        private readonly IIndicadoresRepository _repository;
+        private readonly IPerdasRepository _repository;
 
-        public IndicadoresService(IIndicadoresRepository repository)
+        public PerdasService(IPerdasRepository repository)
         {
             _repository = repository;
         }
 
         public async Task<List<IndicadoresPerda>> GetAll()
         {
-            return  await _repository.GetAll();
+            return await _repository.GetAll();
         }
 
         public async Task<DadosFiltro> ObterDadosFiltro(int cidadeId)
