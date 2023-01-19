@@ -144,7 +144,10 @@ const SideMenu = (props) => {
           </div>
 
           <div className="hello">
-            <i>Bom dia, [UserName]!</i>
+            <i>
+              {/* TODO:MELHORIA */}
+              {/* Bom dia, [UserName]! */}
+            </i>
           </div>
 
           <div className="main-menu">
