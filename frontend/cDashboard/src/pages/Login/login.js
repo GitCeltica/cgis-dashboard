@@ -1,7 +1,7 @@
 
 import {useState} from 'react'
 
-
+import api from "../../services/api";
 
 import './login.css'
 import logo from '../../assets/logo.svg'
@@ -17,30 +17,28 @@ function Login(props) {
   const [showPassword, setShowPassword] = useState(false)
   const [passwordInput, setPasswordInput] = useState("password")
  
-
-  const contas = [
-    {
-        user: 'daniel',
-        pass: '1234'
-    },
-    {
-        user: 'pirapora',
-        pass: '123'
-    },
-    {
-        user: 'admin',
-        pass: '1234'
-    },
-]
   
-function handleLogin(e){
+async function handleLogin(e){
     e.preventDefault()
-    var index = contas.findIndex(p => p.user === usuario && p.pass === senha );
-    if(index < 0){
-        alert("usuario ou senha invalidos!")
-    }else{
-        props.onSubmit(!false)
-    }        
+
+    const response = await api.post('Auth/login',{
+      username: usuario,
+      password: senha,
+     
+    })
+
+    console.log(response.data)
+    const credencial = response.data;
+
+
+
+    if (credencial.token != "")
+    {
+      props.onSubmit(!false)
+    }else
+    {
+      alert("usuario e/ou senha incorretos!")
+    }
 }
 
 function changeUsuario(e){

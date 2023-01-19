@@ -1,0 +1,18 @@
+
+
+
+DROP TABLE Usuarios;
+
+CREATE TABLE Usuarios(Id int IDENTITY(1,1) NOT NULL,
+	           PrimeiroNome Varchar(255) NOT NULL,
+	           UltimoNome varchar(255) NOT NULL,
+		   Username varchar(255) NOT NULL,
+		   PasswordHash varbinary(max),
+		   PasswordSalt varbinary(max),
+		   TipoUsuario INT,
+		   DataCriacao DATETIME2,
+		   DataAtualizacao DATETIME2,
+		   PRIMARY KEY(Id)
+		)
+
+		
