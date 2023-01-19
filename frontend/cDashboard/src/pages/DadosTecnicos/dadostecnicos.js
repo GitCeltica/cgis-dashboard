@@ -18,6 +18,7 @@ export default function DadosTecnicos (){
     const filtro = useSelector(state => state.data)
 
     useEffect(()=>{
+        console.log(filtro)
         setLoading(true)
     }, [filtro])
 
@@ -26,10 +27,10 @@ export default function DadosTecnicos (){
             //2021 mes 3
             const response = await api.post('dadostecnicos/parametros',{
                 CidadeId: 10,
-                //Mes: parseInt(filtro.mes),
-                //Ano: parseInt(filtro.ano),
-                Mes: 0,
-                Ano: 2021,
+                Mes: parseInt(filtro.mes),
+                Ano: parseInt(filtro.ano),
+                // Mes: 0,
+                // Ano: 2021,
                 Regiao: ''
             })
 
@@ -49,8 +50,8 @@ export default function DadosTecnicos (){
 
         const orderByDiametro = responseData.sort((a, b) => (a.diametro > b.diametro) ? 1 : -1);
 
-        console.log("ReponseData:")
-        console.log(responseData)
+        // console.log("ReponseData:")
+        // console.log(responseData)
         let diametroValores = [{name:0, valor:0}, {name:20, valor: 0}, {name:25, valor: 0}, {name: 32, valor: 0}, {name: 40, valor: 0}, {name:50, valor:0}, {name:60, valor: 0}, {name: 75, valor: 0}, {name: 150, valor: 0}, {name:200, valor: 0}]
 
         let materialValores = [{name: "CA", valor: 0}, {name: "DEFO", valor: 0}, {name: "FA", valor: 0}, {name: "FC", valor: 0}, {name: "FG", valor: 0},  {name: "PVC", valor: 0} ]
@@ -202,7 +203,7 @@ export default function DadosTecnicos (){
                 data: tipoValores
             }
 
-        {console.log(dadoGrafico1)}
+        // {console.log(dadoGrafico1)}
         setDadosTecnicos([dadoGrafico1, dadoGrafico2, dadoGrafico3])
         setDadosTecnicosEsgoto([dadoGrafico4, dadoGrafico5, dadoGrafico6])
     }, [responseData])

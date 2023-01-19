@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 const INITIAL_STATE = {
-    data: 
+    data:
     {
         ano: '',
         regiao: '',
@@ -10,14 +10,14 @@ const INITIAL_STATE = {
 };
     
 
-function filtrar( state = INITIAL_STATE, action) {
+function filtrar(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case 'CHANGE_FILTRO' :
-            return{data: action.data}
+        case 'CHANGE_FILTRO':
+            return { data: action.data }
         default:
             return state
     }
-    
+
 }
 
 const store = createStore(filtrar);
