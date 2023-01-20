@@ -36,6 +36,14 @@ export default function Filtro(props, start) {
             } else {
                 setCaminho('dadostecnicos/Filtro/10')
             }
+
+            if (ano.length > 0) {
+                console.log(ano)
+                //agora o ano é dinamico 
+                let anoInicial = (ano[0].label)
+                setSelectedAno(anoInicial)
+                dispatch({ type: 'CHANGE_FILTRO', data: { ano: anoInicial, bairro: selectedBairro, mes: selectedMes } })
+            }
         })
     }, [history])
 
@@ -72,7 +80,8 @@ export default function Filtro(props, start) {
 
             setMes(mesesSigla.map((label, i) => ({ label, value: `${i + 1}` })))
 
-            if (caminho !== 'dadostecnicos/Filtro/10') {
+            let rotaURL = caminho.split('/').shift()
+            if (rotaURL !== 'dadostecnicos') {
                 setBairro(response.data.regioes.map(label => ({ label })))
             }
                
@@ -113,6 +122,8 @@ export default function Filtro(props, start) {
             //agora o ano é dinamico 
             let anoInicial = (ano[0].label)
             setSelectedAno(anoInicial)
+            setSelectedBairro('')
+            setSelectedMes('0')
             dispatch({ type: 'CHANGE_FILTRO', data: { ano: anoInicial, bairro: selectedBairro, mes: selectedMes } })
         }
 

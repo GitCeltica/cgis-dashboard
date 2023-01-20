@@ -35,7 +35,15 @@ export default function Perdas() {
 
             setResponseData(response.data);
             // console.log(responseData)
-            setLoading(false);
+            if(responseData.length === 0){
+                setTimeout(()=> {
+                    setLoading(false);
+                }, 30000)
+            }else{
+                setLoading(false);
+            }
+            
+            
         }
         getDadosFiltro()
 
@@ -155,7 +163,7 @@ export default function Perdas() {
         )
     }
 
-    if (responseData.length === 0) {
+    if (responseData.length === 0 && loading === false) {
         return (
             <div className="content">
                 <h1 className="nodata">

@@ -1,4 +1,4 @@
-
+import wellcome from "../../assets/wellcomemsg.svg";
 
 export default function Home (){
 
@@ -6,9 +6,11 @@ export default function Home (){
 
     return(
         <div className="content">
-             <div className="soon">
-                Coming soon
-            </div>
+             
+                <h1 className="nodata">
+                <img className="loginMsg" src={wellcome} alt="Bem-vindo"/>
+                </h1>
+            
         </div>
     )
 }
