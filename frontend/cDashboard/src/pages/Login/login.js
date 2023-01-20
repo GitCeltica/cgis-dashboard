@@ -27,7 +27,7 @@ async function handleLogin(e){
      
     })
 
-    console.log(response.data)
+    //console.log(response.data)
     const credencial = response.data;
 
 
