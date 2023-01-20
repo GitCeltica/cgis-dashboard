@@ -22,7 +22,6 @@ namespace cGisDashBoard.Helpers.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new PerdasAnoMapping());
             modelBuilder.ApplyConfiguration(new PerdasRegiaoMapping());
 
             modelBuilder.ApplyConfiguration(new OrdemServicoFiltroPorAnoMapping());
@@ -44,8 +43,6 @@ namespace cGisDashBoard.Helpers.Data
         public DbSet<IndicadoresOrdemServico> IndicadoresOrdemServico { get; set; }
 
         public DbSet<IndicadoresOrdemServicoRanking> IndicadoresOrdemServicoRanking { get; set; }
-
-        public DbSet<PerdasAno> PerdasAnos { get; set; }
 
         public DbSet<PerdasRegiao> PerdasRegioes { get; set; }
 

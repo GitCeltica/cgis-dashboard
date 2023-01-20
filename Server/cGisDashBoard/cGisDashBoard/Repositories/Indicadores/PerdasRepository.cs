@@ -28,14 +28,15 @@ namespace cGisDashBoard.Repositories.Indicadores
 
             DadosFiltro result = new DadosFiltro();
 
-            var anos = await _context.PerdasAnos.FromSqlRaw($"select distinct Ano from IndicadoresPerdas where cidadeId = {cidadeId}").ToListAsync();
+            //var anos = await _context.PerdasAnos.FromSqlRaw($"select distinct Ano from IndicadoresPerdas where cidadeId = {cidadeId}").ToListAsync();
+            var anos = await _context.ListaAno.FromSqlRaw($"select distinct Ano from IndicadoresPerdas where cidadeId = {cidadeId}").ToListAsync();
 
             var regioes = await _context.PerdasRegioes.FromSqlRaw($"select distinct Regiao from IndicadoresPerdas where cidadeId = {cidadeId}").ToListAsync();
 
 
             foreach (var item in anos)
             {
-                result.Ano.Add(item.Ano);
+                result.Ano.Add(item.Valor);
             }
 
 
