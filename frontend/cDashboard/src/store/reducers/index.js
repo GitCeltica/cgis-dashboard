@@ -5,7 +5,9 @@ const INITIAL_STATE = {
     {
         ano: '',
         regiao: '',
-        mes: '0'
+        mes: '0',
+        natureza: '',
+        equipe: ''
     }
 };
     

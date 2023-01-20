@@ -27,7 +27,7 @@ export default function Perdas() {
         async function getDadosFiltro() {
 
             const response = await api.post('perdas/Parametros', {
-                CidadeId: 5,
+                CidadeId: 10,
                 Mes: parseInt(filtro.mes),
                 Ano: parseInt(filtro.ano),
                 Regiao: filtro.bairro
