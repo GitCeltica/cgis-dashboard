@@ -26,11 +26,12 @@ namespace cGisDashBoard.Repositories.Indicadores
         {
             DadosTecnicosFiltro result = new DadosTecnicosFiltro();
 
-            var anos = await _context.DadosTecnicosAnos.FromSqlRaw($"select distinct Ano from IndicadoresDadosTecnicos where cidadeID = {cidadeId}").ToListAsync();
+            //var anos = await _context.DadosTecnicosAnos.FromSqlRaw($"select distinct Ano from IndicadoresDadosTecnicos where cidadeID = {cidadeId}").ToListAsync();
+            var anos = await _context.ListaAno.FromSqlRaw($"select distinct Ano from IndicadoresDadosTecnicos where cidadeID = {cidadeId}").ToListAsync();
 
-            foreach(var item in anos)
+            foreach (var item in anos)
             {
-                result.Ano.Add(item.Ano);
+                result.Ano.Add(item.Valor);
             }
 
 

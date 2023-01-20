@@ -1,8 +1,11 @@
-﻿using cGisDashBoard.Models.DTOs.IndicadoresDadosTecnicos;
+﻿
+using cGisDashBoard.Models.DTOs.Genericos;
+using cGisDashBoard.Models.DTOs.IndicadoresDadosTecnicos;
+using cGisDashBoard.Models.DTOs.IndicadoresOrdemServico;
 using cGisDashBoard.Models.DTOs.IndicadoresPerda;
 using cGisDashBoard.Models.Entities;
 using cGisDashBoard.Models.Mapping.Indicadores;
-using cGisDashBoard.Models.Mapping.IndicadoresDadosTecnicos;
+using cGisDashBoard.Models.Mapping.IndicadoresOrdemServico;
 using cGisDashBoard.Repositories.Indicadores;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
@@ -22,7 +25,9 @@ namespace cGisDashBoard.Helpers.Data
             modelBuilder.ApplyConfiguration(new PerdasAnoMapping());
             modelBuilder.ApplyConfiguration(new PerdasRegiaoMapping());
 
-            modelBuilder.ApplyConfiguration(new DadosTecnicosFiltroPorAnoMapping());
+            modelBuilder.ApplyConfiguration(new OrdemServicoFiltroPorAnoMapping());
+            modelBuilder.ApplyConfiguration(new OrdemServicoFiltroPorNaturezaMapping());
+            modelBuilder.ApplyConfiguration(new OrdemServicoFiltroPorEquipeMapping());
 
         }
 
@@ -44,7 +49,11 @@ namespace cGisDashBoard.Helpers.Data
 
         public DbSet<PerdasRegiao> PerdasRegioes { get; set; }
 
-        public DbSet<DadosTecnicosAno> DadosTecnicosAnos { get; set; }
+        public DbSet<Ano> ListaAno { get; set; }
+
+        public DbSet<NaturezaOrdemServico> Naturezas { get; set; }
+
+        public DbSet<EquipeOrdemServico> Equipes { get; set; }
         
     }
 }
