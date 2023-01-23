@@ -3,7 +3,7 @@ export default function LabelOS (dados){
     const data = (dados.dados);
 
     return(
-        <div className="labelc">
+        <div className="labelos">
            
             <label>{data.name}</label>
             <div>

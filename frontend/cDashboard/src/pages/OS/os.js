@@ -116,7 +116,7 @@ export default function Os() {
                     )
                 })}
             </div>
-            <div className="content-top">
+            <div className="content-top" >
                 {ordemServicosBottom.map((ordemServicosBottom) => {
                     return (
                         <div key={ordemServicosBottom.nome} className="twoinone">
