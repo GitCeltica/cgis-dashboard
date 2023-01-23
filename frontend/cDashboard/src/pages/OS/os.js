@@ -14,12 +14,14 @@ export default function Os() {
     const [loading, setLoading] = useState(true);
     const [ordemServicos, setOrdemServicos] = useState([])
     const [responseData, setResponseData] = useState([])
+    const  [ordemServicosTop, setOrdemServicosTop] = useState([])
+    const  [ordemServicosBottom, setOrdemServicosBottom] = useState([])
 
 
     const filtro = useSelector(state => state.data)
 
     useEffect(() => {
-        console.log(filtro)
+        // console.log(filtro)
         setLoading(true)
     }, [filtro])
 
@@ -35,7 +37,7 @@ export default function Os() {
             })
 
             setResponseData(response.data);
-            console.log(responseData)
+            // console.log(responseData)
 
             setLoading(false);
         }
@@ -74,10 +76,14 @@ export default function Os() {
                 }
 
                 setOrdemServicos([dadosLabel1, dadosLabel2, dadosLabel3, dadosLabel4, dadosLabel5, dadosLabel6])
-                
+                setOrdemServicosTop(ordemServicos.slice(0, 3))
+                // console.log(ordemServicosTop)
+                setOrdemServicosBottom(ordemServicos.slice(-3))
+                // console.log(ordemServicosBottom)
+
             }
         }
-        console.log(ordemServicos)
+        // console.log(ordemServicos)
     }, [responseData])
 
     if (loading) {
@@ -102,10 +108,19 @@ export default function Os() {
     return (
         <div className="content">
             <div className="content-top">
-                {ordemServicos.map((ordemServico) => {
+                {ordemServicosTop.map((ordemServicoTop) => {
                     return (
-                        <div key={ordemServico.nome} className="twoinone">
-                            <LabelOS dados={ordemServico}></LabelOS>
+                        <div key={ordemServicoTop.nome} className="twoinone">
+                            <LabelOS dados={ordemServicoTop}></LabelOS>
+                        </div>
+                    )
+                })}
+            </div>
+            <div className="content-top">
+                {ordemServicosBottom.map((ordemServicosBottom) => {
+                    return (
+                        <div key={ordemServicosBottom.nome} className="twoinone">
+                            <LabelOS dados={ordemServicosBottom}></LabelOS>
                         </div>
                     )
                 })}

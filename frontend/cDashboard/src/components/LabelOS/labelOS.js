@@ -1,5 +1,5 @@
 export default function LabelOS (dados){
-    console.log(dados)
+    // console.log(dados)
     const data = (dados.dados);
 
     return(

@@ -19,7 +19,7 @@ export default function Perdas() {
     const filtro = useSelector(state => state.data);
 
     useEffect(() => {
-        console.log(filtro);
+        // console.log(filtro);
         setLoading(true)
     }, [filtro])
 
@@ -35,14 +35,14 @@ export default function Perdas() {
 
             setResponseData(response.data);
             // console.log(responseData)
-            if(responseData.length === 0){
-                setTimeout(()=> {
-                    setLoading(false);
-                }, 30000)
-            }else{
-                setLoading(false);
-            }
-            
+            // if(responseData.length === 0){
+            //     setTimeout(()=> {
+            //         setLoading(false);
+            //     }, 30000)
+            // }else{
+            //     setLoading(false);
+            // }
+            setLoading(false);
             
         }
         getDadosFiltro()

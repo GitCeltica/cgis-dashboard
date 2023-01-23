@@ -49,7 +49,7 @@ export default function Filtro(props, start) {
            
 
             if (ano.length > 0) {
-                console.log(ano)
+                // console.log(ano)
                 //agora o ano é dinamico 
                 let anoInicial = (ano[0].label)
                 setSelectedAno(anoInicial)
@@ -85,11 +85,11 @@ export default function Filtro(props, start) {
                     setCaminho('ordemservicos/Filtro/10')
                 }
             })
-            console.log(caminho)
+            // console.log(caminho)
 
             const response = await api.get(`${caminho}`);
 
-            console.log(response.data)
+            // console.log(response.data)
 
             setAno(response.data.ano.map(label => ({ label })).sort((a, b) => (a.label < b.label) ? 1 : -1))
 
@@ -153,7 +153,7 @@ export default function Filtro(props, start) {
 
     useEffect(() => {
         if (ano.length > 0) {
-            console.log(ano)
+            // console.log(ano)
             //agora o ano é dinamico 
             let anoInicial = (ano[0].label)
             setSelectedAno(anoInicial)

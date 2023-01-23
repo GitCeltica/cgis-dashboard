@@ -127,7 +127,7 @@ const SideMenu = (props) => {
 
   useEffect(() => {
     setTeste(new Date().getTime().toString());
-    console.log(teste);
+    // console.log(teste);
   }, [])
 
 
