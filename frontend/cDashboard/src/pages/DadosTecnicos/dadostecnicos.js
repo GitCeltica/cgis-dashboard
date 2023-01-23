@@ -25,6 +25,7 @@ export default function DadosTecnicos (){
     useEffect(() => {
         async function getDadosFiltro() {
             //2021 mes 3
+            console.log(filtro)
             const response = await api.post('dadostecnicos/parametros',{
                 CidadeId: 10,
                 Mes: parseInt(filtro.mes),
@@ -88,8 +89,6 @@ export default function DadosTecnicos (){
                 {
                     diametroValores[j].valor = diametroValores[j].valor + dadosAgua[i].extensao;
                 }
-
-                diametroValores[j].valor = diametroValores[j].valor.toFixed(2)
             }
         }
 
@@ -110,8 +109,6 @@ export default function DadosTecnicos (){
                     {
                         materialValores[j].valor = materialValores[j].valor + dadosAgua[i].extensao;
                     }
-
-                    materialValores[j].valor = materialValores[j].valor.toFixed(2)
                 }
             }
 
@@ -231,9 +228,7 @@ export default function DadosTecnicos (){
                     return(
                        
                         
-                            <div key={dadosTecnicos.name} className="twoinone">
-                           
-                                <LabelDadosTecnicos dados={dadosTecnicos} label="Extensão Rede Agua por Diametro"></LabelDadosTecnicos>
+                            <div key={dadosTecnicos.name} className="twoinonedt">
                                 <BarDadosTecnicos dados={dadosTecnicos}></BarDadosTecnicos>
                             </div>
                            
@@ -246,9 +241,7 @@ export default function DadosTecnicos (){
                     return(
                        
                         
-                            <div key={dadosTecnicosEsgoto.name} className="twoinone">
-                           
-                                <LabelDadosTecnicos dados={dadosTecnicosEsgoto} label="Extensão Rede Agua por Diametro"></LabelDadosTecnicos>
+                            <div key={dadosTecnicosEsgoto.name} className="twoinonedt">
                                 <BarDadosTecnicos dados={dadosTecnicosEsgoto}></BarDadosTecnicos>
                             </div>
                            
