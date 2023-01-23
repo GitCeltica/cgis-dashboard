@@ -88,6 +88,8 @@ export default function DadosTecnicos (){
                 {
                     diametroValores[j].valor = diametroValores[j].valor + dadosAgua[i].extensao;
                 }
+
+                diametroValores[j].valor = diametroValores[j].valor.toFixed(2)
             }
         }
 
@@ -108,6 +110,8 @@ export default function DadosTecnicos (){
                     {
                         materialValores[j].valor = materialValores[j].valor + dadosAgua[i].extensao;
                     }
+
+                    materialValores[j].valor = materialValores[j].valor.toFixed(2)
                 }
             }
 

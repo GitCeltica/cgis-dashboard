@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2LUwmHZCcnac4V3TchAacVz2w+r0mN5COx+YD1Y9jBxKMsDol7X5qTlc8nz4Wn6QyQxn5J0P+EkIpx4lqajYaw==",
+  "dgSpecHash": "g7roPJzFEz215X3bDfk+Y3sKZWklmZHMTTaLcWJhcc77CpizjIdfB96/ZOByfgSy1vyFa+KU6DTVeB3anAClWw==",
   "success": true,
-  "projectFilePath": "F:\\Celtica\\2023\\Janeiro\\cgis\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
+  "projectFilePath": "F:\\Celtica\\2023\\Janeiro\\cgis-2\\cgis-dashboard\\Server\\cGisDashBoard\\cGisDashBoard\\cGisDashBoard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\welli\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -60,7 +60,7 @@ namespace cGisDashBoard.Repositories.Indicadores
 
             if (parametros.Ano != 0)
             {
-                resultado = resultado.Where(x => x.Ano == parametros.Ano).ToList();
+                resultado = resultado.Where(x => x.Ano <= parametros.Ano).ToList();
             }
 
             if (parametros.Mes != 0)
