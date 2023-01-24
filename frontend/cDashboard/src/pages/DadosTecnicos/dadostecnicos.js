@@ -49,12 +49,13 @@ export default function DadosTecnicos (){
         const orderByMes = responseData.sort((a, b) => (a.mes > b.mes) ? 1 : -1);
         const mesesSigla = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
 
-        
+        const orderByDiametro = responseData.sort( (a, b) => (a.diametro > b.diametro) ? 1: -1 )
 
         // console.log(responseData)
  
         
-        const dadosAgua = responseData.filter(function(item)
+        //const dadosAgua = responseData.filter(function(item)
+        const dadosAgua = orderByMes.filter(function(item)
         {
             if (item.tipoDado === 'A')
             {
@@ -62,7 +63,7 @@ export default function DadosTecnicos (){
             }
         })
 
-        const dadosEsgoto = responseData.filter(function(item)
+        const dadosEsgoto = orderByMes.filter(function(item)
         {
             if (item.tipoDado === 'E')
             {
@@ -80,12 +81,12 @@ export default function DadosTecnicos (){
         let diametroValores = []
 
         
-        for(var i =0; i < responseData.length; i++)
+        for(var i =0; i < orderByDiametro.length; i++)
         {
 
-            if (! diametrosArray.includes(responseData[i].diametro))
+            if (! diametrosArray.includes(orderByDiametro[i].diametro))
             {
-                diametrosArray.push(responseData[i].diametro)
+                diametrosArray.push(orderByDiametro[i].diametro)
             }
         }
 
