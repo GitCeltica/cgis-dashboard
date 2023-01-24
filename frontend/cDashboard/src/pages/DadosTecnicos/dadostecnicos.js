@@ -49,11 +49,10 @@ export default function DadosTecnicos (){
         const orderByMes = responseData.sort((a, b) => (a.mes > b.mes) ? 1 : -1);
         const mesesSigla = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
 
-        const orderByDiametro = responseData.sort((a, b) => (a.diametro > b.diametro) ? 1 : -1);
+        
 
-        // console.log("ReponseData:")
         // console.log(responseData)
-        let diametroValores = [{name:0, valor:0}, {name:20, valor: 0}, {name:25, valor: 0}, {name: 32, valor: 0}, {name: 40, valor: 0}, {name:50, valor:0}, {name:60, valor: 0}, {name: 75, valor: 0}, {name: 150, valor: 0}, {name:200, valor: 0}]
+        //let diametroValores = [{name:0, valor:0}, {name:20, valor: 0}, {name:25, valor: 0}, {name: 32, valor: 0}, {name: 40, valor: 0}, {name:50, valor:0}, {name:60, valor: 0}, {name: 75, valor: 0}, {name: 150, valor: 0}, {name:200, valor: 0}]
 
         let materialValores = [{name: "CA", valor: 0}, {name: "DEFO", valor: 0}, {name: "FA", valor: 0}, {name: "FC", valor: 0}, {name: "FG", valor: 0},  {name: "PVC", valor: 0} ]
 
@@ -81,6 +80,25 @@ export default function DadosTecnicos (){
 
             EXTENSAO POR DIAMETRO AGUA
         */
+
+        let diametrosArray = []
+        let diametroValores = []
+
+        
+        for(var i =0; i < responseData.length; i++)
+        {
+
+            if (! diametrosArray.includes(responseData[i].diametro))
+            {
+                diametrosArray.push(responseData[i].diametro)
+            }
+        }
+
+        for(var i=0; i < diametrosArray.length; i++)
+        {
+            diametroValores.push({name: diametrosArray[i], valor: 0})
+        }
+
         for(var i =0; i < dadosAgua.length; i++)
         {
             for(var j=0; j < diametroValores.length; j++)
@@ -148,20 +166,29 @@ export default function DadosTecnicos (){
 
             EXTENSAO POR DIAMETRO ESGOTO 
             */
+            let diametroValoresEsgoto = []
+
+    
+            for(var i=0; i < diametrosArray.length; i++)
+            {
+                diametroValoresEsgoto.push({name: diametrosArray[i], valor: 0})
+            }
+
+
             for(var i =0; i < dadosEsgoto.length; i++)
             {
-                for(var j=0; j < diametroValoresE.length; j++)
+                for(var j=0; j < diametroValoresEsgoto.length; j++)
                 {
-                    if(dadosEsgoto[i].diametro === diametroValoresE[j].name)
+                    if(dadosEsgoto[i].diametro === diametroValoresEsgoto[j].name)
                     {
-                        diametroValoresE[j].valor = diametroValoresE[j].valor + dadosEsgoto[i].extensao;
+                        diametroValoresEsgoto[j].valor = diametroValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
                     }
                 }
             }
 
             const dadoGrafico4 = {
                 name: "Extensão Rede Esgoto por Diametro",
-                data: diametroValoresE
+                data: diametroValoresEsgoto
             }
 
                     /*
