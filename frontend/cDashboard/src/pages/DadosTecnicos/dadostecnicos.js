@@ -103,6 +103,8 @@ export default function DadosTecnicos (){
                 {
                     diametroValores[j].valor = diametroValores[j].valor + dadosAgua[i].extensao;
                 }
+
+                diametroValores[j].valor = parseFloat(diametroValores[j].valor.toFixed(2))
             }
         }
 
@@ -139,6 +141,8 @@ export default function DadosTecnicos (){
                     {
                         materialValores[j].valor = materialValores[j].valor + dadosAgua[i].extensao;
                     }
+
+                    materialValores[j].valor = parseFloat(materialValores[j].valor.toFixed(2))
                 }
             }
 
@@ -175,6 +179,8 @@ export default function DadosTecnicos (){
                     {
                         tipoValores[j].valor = tipoValores[j].valor + dadosAgua[i].extensao;
                     }
+
+                    tipoValores[j].valor = parseFloat(tipoValores[j].valor.toFixed(2))
                 }
             }
 
@@ -206,6 +212,8 @@ export default function DadosTecnicos (){
                     {
                         diametroValoresEsgoto[j].valor = diametroValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
                     }
+
+                    diametroValoresEsgoto[j].valor = parseFloat(diametroValoresEsgoto[j].valor.toFixed(2))
                 }
             }
 
@@ -234,6 +242,8 @@ export default function DadosTecnicos (){
                     {
                         materialValoresEsgoto[j].valor = materialValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
                     }
+
+                    materialValoresEsgoto[j].valor = parseFloat(materialValoresEsgoto[j].valor.toFixed(2))
                 }
             }
 
@@ -261,6 +271,8 @@ export default function DadosTecnicos (){
                     {
                         tipoValoresEsgoto[j].valor = tipoValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
                     }
+
+                    tipoValoresEsgoto[j].valor = parseFloat(tipoValoresEsgoto[j].valor.toFixed(2))
                 }
             }
 
