@@ -65,7 +65,8 @@ export default function Perdas() {
                 return a
             }, [])).map(index => ({
                 name: index.name,
-                valor: parseFloat(index.valor.toFixed(1))
+                //valor: parseFloat(index.valor.toFixed(1))
+                valor: parseFloat(Math.ceil(index.valor))
             })),
         };
 
@@ -79,7 +80,8 @@ export default function Perdas() {
                 return a
             }, [])).map(index => ({
                 name: index.name,
-                valor: parseFloat(index.valor.toFixed(3))
+                //valor: parseFloat(index.valor.toFixed(3))
+                valor: parseFloat(Math.ceil(index.valor))
             }))
         };
 
