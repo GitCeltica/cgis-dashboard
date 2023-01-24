@@ -65,7 +65,7 @@ export default function Perdas() {
                 return a
             }, [])).map(index => ({
                 name: index.name,
-                valor: parseFloat(index.valor.toFixed(0))
+                valor: parseFloat(index.valor.toFixed(1))
             })),
         };
 
@@ -79,7 +79,7 @@ export default function Perdas() {
                 return a
             }, [])).map(index => ({
                 name: index.name,
-                valor: parseFloat(index.valor.toFixed(2))
+                valor: parseFloat(index.valor.toFixed(3))
             }))
         };
 
@@ -96,6 +96,8 @@ export default function Perdas() {
             }))
         };
 
+        console.log('dadoGrafico3')
+        console.log(dadoGrafico3)
         setPerdas([dadoGrafico1, dadoGrafico2, dadoGrafico3]);
 
     }, [responseData])
