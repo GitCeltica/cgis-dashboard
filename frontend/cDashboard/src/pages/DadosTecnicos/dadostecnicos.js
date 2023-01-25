@@ -98,18 +98,19 @@ export default function DadosTecnicos() {
         const orderByMes = responseData.sort((a, b) => (a.mes > b.mes) ? 1 : -1);
         const mesesSigla = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
 
-
+        const orderByDiametro = responseData.sort((a, b) => (a.diametro > b.diametro) ? 1 : -1)
 
         // console.log(responseData)
 
 
-        const dadosAgua = responseData.filter(function (item) {
+        //const dadosAgua = responseData.filter(function(item)
+        const dadosAgua = orderByMes.filter(function (item) {
             if (item.tipoDado === 'A') {
                 return item
             }
         })
 
-        const dadosEsgoto = responseData.filter(function (item) {
+        const dadosEsgoto = orderByMes.filter(function (item) {
             if (item.tipoDado === 'E') {
                 return item
             }
@@ -125,10 +126,10 @@ export default function DadosTecnicos() {
         let diametroValores = []
 
 
-        for (var i = 0; i < responseData.length; i++) {
+        for (var i = 0; i < orderByDiametro.length; i++) {
 
-            if (!diametrosArray.includes(responseData[i].diametro)) {
-                diametrosArray.push(responseData[i].diametro)
+            if (!diametrosArray.includes(orderByDiametro[i].diametro)) {
+                diametrosArray.push(orderByDiametro[i].diametro)
             }
         }
 
@@ -141,6 +142,8 @@ export default function DadosTecnicos() {
                 if (dadosAgua[i].diametro === diametroValores[j].name) {
                     diametroValores[j].valor = diametroValores[j].valor + dadosAgua[i].extensao;
                 }
+
+                diametroValores[j].valor = parseFloat(diametroValores[j].valor.toFixed(2))
             }
         }
 
@@ -175,6 +178,16 @@ export default function DadosTecnicos() {
         }
 
 
+        for (var i = 0; i < dadosAgua.length; i++) {
+            for (var j = 0; j < materialValores.length; j++) {
+                if (dadosAgua[i].material === materialValores[j].name) {
+                    materialValores[j].valor = materialValores[j].valor + dadosAgua[i].extensao;
+                }
+
+                materialValores[j].valor = parseFloat(materialValores[j].valor.toFixed(2))
+            }
+        }
+
         const dadoGrafico2 = {
             name: "Extensão Rede Agua por Material",
             data: materialValores
@@ -206,6 +219,16 @@ export default function DadosTecnicos() {
         }
 
 
+        for (var i = 0; i < dadosAgua.length; i++) {
+            for (var j = 0; j < tipoValores.length; j++) {
+                if (dadosAgua[i].tipo === tipoValores[j].name) {
+                    tipoValores[j].valor = tipoValores[j].valor + dadosAgua[i].extensao;
+                }
+
+                tipoValores[j].valor = parseFloat(tipoValores[j].valor.toFixed(2))
+            }
+        }
+
         const dadoGrafico3 = {
             name: "Extensão Rede Agua por Tipo",
             data: tipoValores
@@ -214,11 +237,9 @@ export default function DadosTecnicos() {
 
 
         let tipoValoresE = [{ name: "AAB", valor: 0 }, { name: "AAT", valor: 0 }, { name: "ALI", valor: 0 }, { name: "DSC", valor: 0 }, { name: "RDA", valor: 0 }]
-
         /*
-         EXTENSAO POR DIAMETRO ESGOTO
+        EXTENSAO POR DIAMETRO ESGOTO 
         */
-
         let diametroValoresEsgoto = []
 
 
@@ -232,8 +253,33 @@ export default function DadosTecnicos() {
                 if (dadosEsgoto[i].diametro === diametroValoresEsgoto[j].name) {
                     diametroValoresEsgoto[j].valor = diametroValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
                 }
+
+                diametroValoresEsgoto[j].valor = parseFloat(diametroValoresEsgoto[j].valor.toFixed(2))
             }
         }
+
+
+
+        /*
+EXTENSAO POR MATERIAL ESGOTO
+*/
+
+
+
+        for (var i = 0; i < diametrosArray.length; i++) {
+            diametroValoresEsgoto.push({ name: diametrosArray[i], valor: 0 })
+        }
+
+        for (var i = 0; i < dadosEsgoto.length; i++) {
+            for (var j = 0; j < materialValoresEsgoto.length; j++) {
+                if (dadosEsgoto[i].material === materialValoresEsgoto[j].name) {
+                    materialValoresEsgoto[j].valor = materialValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
+                }
+
+                materialValoresEsgoto[j].valor = parseFloat(materialValoresEsgoto[j].valor.toFixed(2))
+            }
+        }
+
 
 
         const dadoGrafico4 = {
@@ -280,8 +326,11 @@ export default function DadosTecnicos() {
                 if (dadosEsgoto[i].tipo === tipoValoresEsgoto[j].name) {
                     tipoValoresEsgoto[j].valor = tipoValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
                 }
+
+                tipoValoresEsgoto[j].valor = parseFloat(tipoValoresEsgoto[j].valor.toFixed(2))
             }
         }
+
 
 
         const dadoGrafico6 = {
