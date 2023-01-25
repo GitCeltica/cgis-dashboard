@@ -3,7 +3,7 @@ import { createStore } from "redux";
 const INITIAL_STATE = {
     data:
     {
-        ano: '',
+        ano: '0',
         regiao: '',
         mes: '0',
         natureza: '',
