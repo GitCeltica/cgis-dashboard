@@ -150,48 +150,46 @@ export default function DadosTecnicos() {
         const dadoGrafico1 = {
             name: "Extensão Rede Agua por Diametro",
             data: diametroValores
-        }
+        }       
 
         /*
             EXTENSAO POR MATERIAL AGUA
         */
 
-        let materialArray = []
-        let materialValores = []
+            let materialArray = []
+            let materialValores = []
 
-        for (var i = 0; i < responseData.length; i++) {
-            if (!materialArray.includes(responseData[i].material)) {
-                materialArray.push(responseData[i].material)
-            }
-        }
-
-        for (var i = 0; i < materialArray.length; i++) {
-            materialValores.push({ name: materialArray[i], valor: 0 })
-        }
-
-        for (var i = 0; i < dadosAgua.length; i++) {
-            for (var j = 0; j < materialValores.length; j++) {
-                if (dadosAgua[i].material === materialValores[j].name) {
-                    materialValores[j].valor = materialValores[j].valor + dadosAgua[i].extensao;
+            for(var i=0; i < responseData.length; i++)
+            {
+                if(! materialArray.includes(responseData[i].material))
+                {
+                    materialArray.push(responseData[i].material)
                 }
             }
-        }
 
-
-        for (var i = 0; i < dadosAgua.length; i++) {
-            for (var j = 0; j < materialValores.length; j++) {
-                if (dadosAgua[i].material === materialValores[j].name) {
-                    materialValores[j].valor = materialValores[j].valor + dadosAgua[i].extensao;
-                }
-
-                materialValores[j].valor = parseFloat(materialValores[j].valor.toFixed(2))
+            for(var i=0; i <materialArray.length; i++)
+            {
+                materialValores.push({name: materialArray[i], valor: 0})
             }
-        }
 
-        const dadoGrafico2 = {
+            for(var i =0; i < dadosAgua.length; i++)
+            {
+                for(var j=0; j < materialValores.length; j++)
+                {
+                    if(dadosAgua[i].material === materialValores[j].name)
+                    {
+                        materialValores[j].valor = materialValores[j].valor + dadosAgua[i].extensao;
+                    }
+
+                    materialValores[j].valor = parseFloat(materialValores[j].valor.toFixed(2))
+                }
+            }
+
+        const dadoGrafico2 ={
             name: "Extensão Rede Agua por Material",
             data: materialValores
         }
+
 
         /*
             EXTENSAO POR TIPO 
@@ -208,14 +206,6 @@ export default function DadosTecnicos() {
 
         for (var i = 0; i < tiposArray.length; i++) {
             tipoValores.push({ name: tiposArray[i], valor: 0 })
-        }
-
-        for (var i = 0; i < dadosAgua.length; i++) {
-            for (var j = 0; j < tipoValores.length; j++) {
-                if (dadosAgua[i].tipo === tipoValores[j].name) {
-                    tipoValores[j].valor = tipoValores[j].valor + dadosAgua[i].extensao;
-                }
-            }
         }
 
 
@@ -242,45 +232,23 @@ export default function DadosTecnicos() {
         */
         let diametroValoresEsgoto = []
 
-
-        for (var i = 0; i < diametrosArray.length; i++) {
-            diametroValoresEsgoto.push({ name: diametrosArray[i], valor: 0 })
-        }
-
-
-        for (var i = 0; i < dadosEsgoto.length; i++) {
-            for (var j = 0; j < diametroValoresEsgoto.length; j++) {
-                if (dadosEsgoto[i].diametro === diametroValoresEsgoto[j].name) {
-                    diametroValoresEsgoto[j].valor = diametroValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
-                }
-
-                diametroValoresEsgoto[j].valor = parseFloat(diametroValoresEsgoto[j].valor.toFixed(2))
-            }
-        }
-
-
-
-        /*
-EXTENSAO POR MATERIAL ESGOTO
-*/
-
-
-
         for (var i = 0; i < diametrosArray.length; i++) {
             diametroValoresEsgoto.push({ name: diametrosArray[i], valor: 0 })
         }
 
         for (var i = 0; i < dadosEsgoto.length; i++) {
-            for (var j = 0; j < materialValoresEsgoto.length; j++) {
-                if (dadosEsgoto[i].material === materialValoresEsgoto[j].name) {
-                    materialValoresEsgoto[j].valor = materialValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
-                }
 
-                materialValoresEsgoto[j].valor = parseFloat(materialValoresEsgoto[j].valor.toFixed(2))
+
+            for (var i = 0; i < dadosEsgoto.length; i++) {
+                for (var j = 0; j < diametroValoresEsgoto.length; j++) {
+                    if (dadosEsgoto[i].diametro === diametroValoresEsgoto[j].name) {
+                        diametroValoresEsgoto[j].valor = diametroValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
+                    }
+
+                    diametroValoresEsgoto[j].valor = parseFloat(diametroValoresEsgoto[j].valor.toFixed(2))
+                }
             }
         }
-
-
 
         const dadoGrafico4 = {
             name: "Extensão Rede Esgoto por Diametro",
@@ -315,28 +283,30 @@ EXTENSAO POR MATERIAL ESGOTO
             EXTENSAO POR TIPO ESGOTO
         */
 
-        let tipoValoresEsgoto = []
+            let tipoValoresEsgoto = []
 
-        for (var i = 0; i < tiposArray.length; i++) {
-            tipoValoresEsgoto.push({ name: tiposArray[i], valor: 0 })
-        }
-
-        for (var i = 0; i < dadosEsgoto.length; i++) {
-            for (var j = 0; j < tipoValoresEsgoto.length; j++) {
-                if (dadosEsgoto[i].tipo === tipoValoresEsgoto[j].name) {
-                    tipoValoresEsgoto[j].valor = tipoValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
-                }
-
-                tipoValoresEsgoto[j].valor = parseFloat(tipoValoresEsgoto[j].valor.toFixed(2))
+            for(var i=0; i < tiposArray.length; i++)
+            {
+                tipoValoresEsgoto.push({name: tiposArray[i], valor: 0})
             }
-        }
 
+            for(var i =0; i < dadosEsgoto.length; i++)
+            {
+                for(var j=0; j < tipoValoresEsgoto.length; j++)
+                {
+                    if(dadosEsgoto[i].tipo === tipoValoresEsgoto[j].name)
+                    {
+                        tipoValoresEsgoto[j].valor = tipoValoresEsgoto[j].valor + dadosEsgoto[i].extensao;
+                    }
 
+                    tipoValoresEsgoto[j].valor = parseFloat(tipoValoresEsgoto[j].valor.toFixed(2))
+                }
+            }
 
-        const dadoGrafico6 = {
-            name: "Extensão Rede Esgoto por Tipo",
-            data: tipoValores
-        }
+            const dadoGrafico6 ={
+                name: "Extensão Rede Esgoto por Tipo",
+                data: tipoValoresEsgoto
+            }
 
 
         // {console.log(dadoGrafico1)}
