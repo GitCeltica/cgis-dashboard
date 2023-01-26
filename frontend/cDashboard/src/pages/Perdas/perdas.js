@@ -161,7 +161,7 @@ export default function Perdas() {
                 }
                 const data3 = {
                     name: "Tempo médio correções OS de vazamento",
-                    valor: perdas[2].data.reduce((acc, d) => acc + d.valor, 0)
+                    valor: perdas[2].total
                 }
                 const data4 = {
                     name: "Idade média hidrometros",
