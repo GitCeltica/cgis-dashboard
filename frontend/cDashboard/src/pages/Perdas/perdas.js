@@ -34,7 +34,12 @@ export default function Perdas() {
             })
 
             setResponseData(response.data);
-            // console.log(responseData)
+            console.log(responseData.map(index => {
+                return {
+                    index: index,
+                    valor: index.tempoMedioCorrecao < 0 ? index.tempoMedioCorrecao : null
+                }
+            }))
             // if(responseData.length === 0){
             //     setTimeout(()=> {
             //         setLoading(false);
@@ -43,7 +48,7 @@ export default function Perdas() {
             //     setLoading(false);
             // }
             setLoading(false);
-            
+
         }
         getDadosFiltro()
 
@@ -70,7 +75,6 @@ export default function Perdas() {
             })),
         };
 
-
         const dadoGrafico2 = {
             name: "NºOS de Vazamento p/ligações",
             data: (orderByMes.map(({ mes, vazamentoLigacoes }) => ({ name: mesesSigla[mes - 1], valor: vazamentoLigacoes })).reduce((a, c) => {
@@ -85,17 +89,32 @@ export default function Perdas() {
             }))
         };
 
+        var contadorPorMes  = [... (orderByMes.map(({ mes, tempoMedioCorrecao }) => ({ name: mesesSigla[mes - 1], valor: tempoMedioCorrecao }))).reduce((mp, o) => {
+            if (!mp.has(o.name)) mp.set(o.name, { ...o, count: 0 });
+            mp.get(o.name).count++;
+            return mp;
+        }, new Map).values()];
+
         const dadoGrafico3 = {
             name: "Tempo médio correções OS de vazamento",
             data: (orderByMes.map(({ mes, tempoMedioCorrecao }) => ({ name: mesesSigla[mes - 1], valor: tempoMedioCorrecao }))).reduce((a, c) => {
+
+              let d = contadorPorMes.find(d => d.name === c.name)
+                if (c.valor < 0) c.valor = 0;
                 let x = a.find(e => e.name === c.name)
                 if (!x) a.push(Object.assign({}, c))
-                else x.valor += c.valor / responseData.length
+                else {
+                    x.valor += c.valor / d.count
+                }
                 return a
             }, []).map(index => ({
                 name: index.name,
-                valor: parseFloat(index.valor.toFixed(2))
-            }))
+                valor: parseFloat(index.valor.toFixed(2)),
+            })),
+            // total: dg3.data.reduce((acc, d) => acc + d.total, 0 )
+            total: (orderByMes.map(({ mes, tempoMedioCorrecao }) => ({ name: mesesSigla[mes - 1], valor: tempoMedioCorrecao }))).reduce((a, c) => a + (c.valor < 0 ? 0 : c.valor) / responseData.length, 0)
+
+            // data.data.reduce((acc, d) => acc + d.valor, 0 )
         };
 
         console.log('dadoGrafico3')
@@ -146,7 +165,7 @@ export default function Perdas() {
                 }
                 const data4 = {
                     name: "Idade média hidrometros",
-                    valor: responseData.reduce((acc, d) => acc + d.idadeMediaHidrometros / responseData.length, 0)
+                    valor: responseData.reduce((acc, d) => acc + d.idadeMediaHidrometros / responseData.length, 0).toFixed(2)
                 }
                 const data5 = {
                     name: "Infrações confirmadas",

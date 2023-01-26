@@ -13,10 +13,9 @@ export default function TableC (dados){
                         return(
                         <tr key={index.name}>
                         <th>{index.name}</th>
-                        <td>{index.valor} </td>
+                        <td>{ index.name === "Percentual de Clientes com Esgoto Tratado"? index.valor : Number(Math.round(index.valor+'e2')+'e-2') } </td>
                         </tr>
                         )
-                        
                     })}
                     </tbody>
                 </table>

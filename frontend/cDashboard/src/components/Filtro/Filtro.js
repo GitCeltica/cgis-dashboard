@@ -40,10 +40,10 @@ export default function Filtro(props, start) {
             if (location.pathname === '/perdas') {
                 setCaminho('perdas/Filtro/10');
             } 
-            if (location.pathname === '/dadostecnicos') {
+            else if (location.pathname === '/dadostecnicos') {
                 setCaminho('dadostecnicos/Filtro/10')
             }
-            if (location.pathname === '/os') {
+            else if (location.pathname === '/os') {
                 setCaminho('ordemservicos/Filtro/10')
             }
            
@@ -78,10 +78,10 @@ export default function Filtro(props, start) {
                 if (location.pathname === '/perdas') {
                     setCaminho('perdas/Filtro/10');
                 }
-                if (location.pathname === '/dadostecnicos') {
+                else if (location.pathname === '/dadostecnicos') {
                     setCaminho('dadostecnicos/Filtro/10')
                 }
-                if (location.pathname === '/os') {
+                else if (location.pathname === '/os') {
                     setCaminho('ordemservicos/Filtro/10')
                 }
             })

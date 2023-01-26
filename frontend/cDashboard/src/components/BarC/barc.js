@@ -47,7 +47,7 @@ export default function BarC (dados){
         ))}
       </Bar>
       {data.data.length !== 1 ? (  averageHide === false ?  (
-        <ReferenceLine y={average} stroke="#B14545" strokeWidth="3" position="right" ifOverflow="extendDomain" />
+        <ReferenceLine y={data.name === "Tempo médio correções OS de vazamento" ? data.total : average} stroke="#B14545" strokeWidth="3" position="right" ifOverflow="extendDomain" />
       ) : (
         null
       )) : ( null) }
