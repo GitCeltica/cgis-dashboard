@@ -1,0 +1,22 @@
+﻿using cGisDashBoard.Models.DTOs.IndicadoresOrdemServico;
+using cGisDashBoard.Models.DTOs.IndicadorPerdas;
+using cGisDashBoard.Models.Entities;
+
+namespace cGisDashBoard.Repositories.Interfaces.Indicadores
+{
+    public interface IOrdemServicoRankingRepository
+    {
+        public Task<List<IndicadoresOrdemServicoRanking>> GetAll();
+
+        public Task<List<IndicadoresOrdemServicoRanking>> ObterPorCidade(int cidadeId);
+
+        public Task<List<IndicadoresOrdemServicoRanking>> ObterPorFiltro(ParametrosIndicadorOS parametros);
+
+        public Task<List<RegiaoAfetada>> ObterRegiaoAfetadaPorFiltro(ParametrosIndicadorOS parametros);
+
+        public Task<List<MaterialGasto>> ObterMaterialGastoPorFiltro(ParametrosIndicadorOS parametros);
+
+        public Task<List<EconomiaOrdemServico>> ObterEconomiaGeradaPorFiltro(ParametrosIndicadorOS parametros);
+
+    }
+}
