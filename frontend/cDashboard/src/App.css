@@ -1705,3 +1705,9 @@ th {
         width: 80vw;
     }
 }
+
+.ranking{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

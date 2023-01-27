@@ -34,21 +34,20 @@ export default function BarDuasSeries(dados) {
           <YAxis fontSize="10" domain={[0, dataMax => (dataMax > 10000 ? dataMax /10 : dataMax)]} allowDataOverflow="false" interval="preserveStart" />
           {/* <YAxis yAxisId="right" orientation='right' fontSize="10" domain={[0, dataMax => (100) ]} allowDataOverflow="true" interval="preserveStart" /> */}
 
-          <Tooltip />
+          <Tooltip formatter={(value) => new Intl.NumberFormat('pt-BR').format(value)} />
           <Legend onClick={handleClick}/>
-          <Bar dataKey="Ligações" onClick={handleClick} fill='#629F64' >
+          <Bar dataKey="Ligações" onClick={handleClick} fill='#629F64'>
             {data.map((entry, index) => (
               <Cell cursor="pointer"
-                fill='#629F64'
-                key={`cell-${index}`}
+                key={`cell-${Number(Math.round(index +'e2')+'e-2')}`}
                 onClick={() => setSelectedData(!selectedData)} />
             ))}
           </Bar>
-          <Bar dataKey="Consumo Médio" onClick={handleClick} fill='#D9AE3F'>
+          <Bar dataKey="Consumo Médio" onClick={handleClick} fill='#D9AE3F' unit='m³'>
             {data.map((entry, index) => (
               <Cell cursor="pointer"
-              
-                key={`cell-${index}`}
+                
+                key={`cell-${Number(Math.round(index +'e2')+'e-2')}`}
                 onClick={() => setSelectedData(!selectedData)} />
             ))}
             </Bar>

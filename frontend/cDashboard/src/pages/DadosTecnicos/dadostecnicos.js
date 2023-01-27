@@ -66,7 +66,7 @@ export default function DadosTecnicos() {
         setDadosConsumo(responseData2.map(item => {
             return {
                 id: item.id,
-                'Consumo Médio': item.consumoMedio,
+                'Consumo Médio': parseFloat(item.consumoMedio.toFixed(2)),
                 'Ligações': item.ligacoes,
                 tipo: item.tipo
             };

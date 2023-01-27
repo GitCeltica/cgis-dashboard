@@ -20,7 +20,7 @@ export default function BarDadosTecnicos(dados)
         <CartesianGrid  />
         <XAxis dataKey="name" fontSize="12" interval={0}/>
         <YAxis fontSize="10" />
-        <Tooltip />
+        <Tooltip formatter={(value) => new Intl.NumberFormat('pt-BR').format(value)} />
         <Bar dataKey="valor" fill="#375E65">
            {/* {data.data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={barcolors[index %20]}/>

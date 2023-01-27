@@ -178,8 +178,9 @@ export default function Os() {
                         <br></br><br></br>
                         {bairrosAfetados.map((bairroAfetado) => {
                             return (
-                                <div key={bairroAfetado.index}>
-                                    <span>{bairrosAfetados.indexOf(bairroAfetado) + 1}-{bairroAfetado.regiao}→{bairroAfetado.quantidadeOs}x</span>
+                                <div className="ranking"  key={bairroAfetado.index}>
+                                    <span>{bairrosAfetados.indexOf(bairroAfetado) + 1} - {bairroAfetado.regiao}</span>
+                                    <span>{bairroAfetado.quantidadeOs}x</span>
                                 </div>
                             )
                         })}
@@ -192,8 +193,9 @@ export default function Os() {
                         <br></br><br></br>
                         {materiaisGastos.map((materialGasto) => {
                             return (
-                                <div key={materialGasto.material}>
-                                    <span>{materiaisGastos.indexOf(materialGasto) + 1}-{materialGasto.material}→{materialGasto.quantidadeMaterial}Und</span>
+                                <div className="ranking" key={materialGasto.material}>
+                                    <span>{materiaisGastos.indexOf(materialGasto) + 1} - {materialGasto.material}</span>
+                                    <span>{materialGasto.quantidadeMaterial}Und</span>
                                 </div>
                             )
                         })}

@@ -37,7 +37,7 @@ export default function BarC (dados){
       <CartesianGrid  />
       <XAxis dataKey="name" fontSize="12" interval={0}/>
       <YAxis fontSize="10" />
-      <Tooltip />
+      <Tooltip formatter={(value) => new Intl.NumberFormat('pt-BR').format(value)} />
       <Bar dataKey="valor" onClick={handleClick} >
         {data.data.map((entry, index) => (
           <Cell cursor="pointer" 
