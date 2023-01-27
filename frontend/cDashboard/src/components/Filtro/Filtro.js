@@ -120,6 +120,7 @@ export default function Filtro(props, start) {
 
     function HandleFilter(e) {
         e.preventDefault();
+        setInactiveFilter(true)
         dispatch({ type: 'CHANGE_FILTRO', data: { ano: selectedAno, bairro: selectedBairro, mes: selectedMes, equipe: selectedEquipe, natureza: selectedNatureza } })
     }
 

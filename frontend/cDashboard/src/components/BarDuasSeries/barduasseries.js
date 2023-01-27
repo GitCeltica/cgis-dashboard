@@ -23,7 +23,7 @@ export default function BarDuasSeries(dados) {
   return (
     <div className="linec">
       <label>Consumo Médio e Número de Ligações por Tipo de Econômia</label>
-      <ResponsiveContainer height={300}>
+      <ResponsiveContainer width="99%" height={300}>
         <BarChart
           data={ selectedData ? (activeItem) : (data)}
 
