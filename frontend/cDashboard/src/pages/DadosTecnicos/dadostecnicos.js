@@ -8,6 +8,7 @@ import BarDadosTecnicos from "../../components/BarDadosTecnicos";
 import api from "../../services/api";
 import { useSelector } from "react-redux";
 import Loading from "../../components/Loading/loading"
+import noData from "../../assets/nodatamsg.svg";
 import BarDuasSeries from "../../components/BarDuasSeries/barduasseries";
 
 export default function DadosTecnicos() {
@@ -314,6 +315,20 @@ export default function DadosTecnicos() {
             <Loading />
         )
 
+    }
+
+    if (responseData.length === 0 && loading === false) {
+        return (
+            <div className="content">
+                <h1 className="nodata">
+                    <div  >
+                        <label>Oops!</label>
+                        <label>Dados Indisponíveis</label>
+                    </div>
+                    <img src={noData} alt="No data" />
+                </h1>
+            </div>
+        )
     }
     return (
 

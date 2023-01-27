@@ -53,7 +53,7 @@ export default function Filtro(props, start) {
                 //agora o ano é dinamico 
                 let anoInicial = (ano[0].label)
                 setSelectedAno(anoInicial)
-                dispatch({ type: 'CHANGE_FILTRO', data: { ano: anoInicial, bairro: selectedBairro, mes: selectedMes } })
+                dispatch({ type: 'CHANGE_FILTRO', data: { ano: anoInicial, bairro: selectedBairro, mes: selectedMes, equipe: selectedEquipe, natureza: selectedNatureza } })
             }
         })
     }, [history])
@@ -136,11 +136,11 @@ export default function Filtro(props, start) {
     }
 
     function changeEquipe(e) {
-        setSelectedEquipe(e.target.value)
+        setSelectedEquipe(e.target.value);
     }
 
     function changeNatureza(e) {
-        setSelectedNatureza(e.target.value)
+        setSelectedNatureza(e.target.value);
     }
 
 

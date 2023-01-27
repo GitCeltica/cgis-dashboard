@@ -12,34 +12,72 @@ import noData from "../../assets/nodatamsg.svg";
 
 export default function Os() {
     const [loading, setLoading] = useState(true);
-    const [ordemServicos, setOrdemServicos] = useState([])
-    const [responseData, setResponseData] = useState([])
-    const  [ordemServicosTop, setOrdemServicosTop] = useState([])
-    const  [ordemServicosBottom, setOrdemServicosBottom] = useState([])
+    const [ordemServicos, setOrdemServicos] = useState([]);
+    const [responseData, setResponseData] = useState([]);
+    const [responseData2, setResponseData2] = useState([]);
+    const [responseData3, setResponseData3] = useState([]);
+    const [responseData4, setResponseData4] = useState([]);
+    const [ordemServicosTop, setOrdemServicosTop] = useState([]);
+    const [ordemServicosBottom, setOrdemServicosBottom] = useState([]);
+    const [bairrosAfetados, setBairrosAfetados] = useState([]);
+    const [materiaisGastos, setMateriaisGastos] = useState([]);
 
 
-    const filtro = useSelector(state => state.data)
+    const filtro = useSelector(state => state.data);
 
     useEffect(() => {
-        // console.log(filtro)
+        console.log(filtro)
         setLoading(true)
     }, [filtro])
 
     useEffect(() => {
         async function getDadosFiltro() {
-
-            const response = await api.post('OrdemServicos/parametros', {
+            const response = await api.post('ordemServicos/parametros', {
                 CidadeId: 10,
-                natureza: filtro.natureza,
-                equipe: filtro.equipe,
+                Natureza: filtro.natureza,
+                Equipe: filtro.equipe,
                 Mes: parseInt(filtro.mes),
                 Ano: parseInt(filtro.ano)
             })
 
-            setResponseData(response.data);
-            // console.log(responseData)
+            const response2 = await api.post('ordemServicosRanking/RegioesAfetadas/parametros', {
+                CidadeId: 10,
+                Natureza: filtro.natureza,
+                Equipe: filtro.equipe,
+                Regiao: '',
+                Mes: parseInt(filtro.mes),
+                Ano: parseInt(filtro.ano)
+            })
 
+            const response3 = await api.post('ordemServicosRanking/MaterialGasto/parametros', {
+                CidadeId: 10,
+                Natureza: filtro.natureza,
+                Equipe: filtro.equipe,
+                Regiao: '',
+                Mes: parseInt(filtro.mes),
+                Ano: parseInt(filtro.ano)
+            })
+
+            const response4 = await api.post('ordemServicosRanking/EconomiaTotalGerada/parametros', {
+                CidadeId: 10,
+                Natureza: filtro.natureza,
+                Equipe: filtro.equipe,
+                Regiao: '',
+                Mes: parseInt(filtro.mes),
+                Ano: parseInt(filtro.ano)
+            })
+
+
+            setResponseData(response.data);
+            setResponseData2(response2.data);
+            setResponseData3(response3.data);
+            setResponseData4(response4.data);
+
+            console.log(responseData2)
+            console.log(responseData3)
+            console.log(responseData4)
             setLoading(false);
+
         }
         getDadosFiltro()
 
@@ -47,51 +85,150 @@ export default function Os() {
 
 
     useEffect(() => {
-        if (responseData.length > 0) {
 
-            if (responseData[0].mes !== null) {
-                const dadosLabel1 = {
-                    name: "Quantidade OS",
-                    data: responseData.reduce((tot, arr) => tot + arr.qtdOS, 0)
-                }
-                const dadosLabel2 = {
-                    name: "Quantidade OS no Prazo",
-                    data: responseData.reduce((tot, arr) => tot + arr.qtdOSPrazo, 0)
-                }
-                const dadosLabel3 = {
-                    name: "Quantidade OS Fora do Prazo",
-                    data: responseData.reduce((tot, arr) => tot + arr.qtdOSForaPrazo, 0)
-                }
-                const dadosLabel4 = {
-                    name: "Custo Medio",
-                    data: responseData.reduce((tot, arr) => tot + arr.custoMedio, 0)
-                }
-                const dadosLabel5 = {
-                    name: "Distancia Media",
-                    data: responseData.reduce((tot, arr) => tot + arr.distanciaMedia, 0)
-                }
-                const dadosLabel6 = {
-                    name: "Tempo Medio",
-                    data: responseData.reduce((tot, arr) => tot + arr.tempoMedio, 0)
-                }
-
-                setOrdemServicos([dadosLabel1, dadosLabel2, dadosLabel3, dadosLabel4, dadosLabel5, dadosLabel6])
-                setOrdemServicosTop(ordemServicos.slice(0, 3))
-                // console.log(ordemServicosTop)
-                setOrdemServicosBottom(ordemServicos.slice(-3))
-                // console.log(ordemServicosBottom)
-
-            }
+        const dadosLabel1 = {
+            name: "Quantidade OS",
+            data: responseData.reduce((tot, arr) => tot + arr.qtdOS, 0)
         }
+        const dadosLabel2 = {
+            name: "Quantidade OS no Prazo",
+            data: responseData.reduce((tot, arr) => tot + arr.qtdOSPrazo, 0)
+        }
+        const dadosLabel3 = {
+            name: "Quantidade OS Fora do Prazo",
+            data: responseData.reduce((tot, arr) => tot + arr.qtdOSForaPrazo, 0)
+        }
+        const dadosLabel4 = {
+            name: "Custo Medio",
+            data: responseData.reduce((tot, arr) => tot + arr.custoMedio, 0)
+        }
+        const dadosLabel5 = {
+            name: "Distancia Media",
+            data: responseData.reduce((tot, arr) => tot + arr.distanciaMedia, 0)
+        }
+        const dadosLabel6 = {
+            name: "Tempo Medio",
+            data: responseData.reduce((tot, arr) => tot + arr.tempoMedio, 0)
+        }
+
+        setOrdemServicos([dadosLabel1, dadosLabel2, dadosLabel3, dadosLabel4, dadosLabel5, dadosLabel6])
+        setOrdemServicosTop(ordemServicos.slice(0, 3))
+        // console.log(ordemServicosTop)
+        setOrdemServicosBottom(ordemServicos.slice(-3))
+        // console.log(ordemServicosBottom)
+
+
+
         // console.log(ordemServicos)
     }, [responseData])
 
-    if (loading) {
+
+    useEffect(() => {
+
+        const top5Bairro = responseData2.reduce((a, c) => {
+            let x = a.find(e => e.regiao === c.regiao)
+            if (!x) a.push(Object.assign({}, c))
+            else x.quantidadeOs += c.quantidadeOs
+            return a
+        }, []).sort((a, b) => b.quantidadeOs - a.quantidadeOs).slice(0, 5)
+        setBairrosAfetados(top5Bairro)
+        console.log(bairrosAfetados)
+    }, [responseData2])
+
+    useEffect(() => {
+
+        const top5Materiais = responseData3.reduce((a, c) => {
+            let x = a.find(e => e.material === c.material)
+            if (!x) a.push(Object.assign({}, c))
+            else x.quantidadeMaterial += c.quantidadeMaterial
+            return a
+        }, []).sort((a, b) => b.quantidadeMaterial - a.quantidadeMaterial).slice(0, 5)
+        setMateriaisGastos(top5Materiais)
+    }, [responseData2])
+
+    useEffect(() => {
+
+        const dadosLabel1 = {
+            name: "Quantidade OS",
+            data: responseData.reduce((tot, arr) => tot + arr.qtdOS, 0)
+        }
+        const dadosLabel2 = {
+            name: "Quantidade OS no Prazo",
+            data: responseData.reduce((tot, arr) => tot + arr.qtdOSPrazo, 0)
+        }
+        const dadosLabel3 = {
+            name: "Quantidade OS Fora do Prazo",
+            data: responseData.reduce((tot, arr) => tot + arr.qtdOSForaPrazo, 0)
+        }
+        const dadosLabel4 = {
+            name: "Custo Medio",
+            data: responseData.reduce((tot, arr) => tot + arr.custoMedio, 0)
+        }
+        const dadosLabel5 = {
+            name: "Distancia Media",
+            data: responseData.reduce((tot, arr) => tot + arr.distanciaMedia, 0)
+        }
+        const dadosLabel6 = {
+            name: "Tempo Medio",
+            data: responseData.reduce((tot, arr) => tot + arr.tempoMedio, 0)
+        }
+
+        setOrdemServicos([dadosLabel1, dadosLabel2, dadosLabel3, dadosLabel4, dadosLabel5, dadosLabel6])
+        setOrdemServicosTop(ordemServicos.slice(0, 3))
+        // console.log(ordemServicosTop)
+        setOrdemServicosBottom(ordemServicos.slice(-3))
+        // console.log(ordemServicosBottom)
+
+
+
+        // console.log(ordemServicos)
+    }, [responseData])
+
+    useEffect(() => {
+
+        const dadosLabel1 = {
+            name: "Quantidade OS",
+            data: responseData.reduce((tot, arr) => tot + arr.qtdOS, 0)
+        }
+        const dadosLabel2 = {
+            name: "Quantidade OS no Prazo",
+            data: responseData.reduce((tot, arr) => tot + arr.qtdOSPrazo, 0)
+        }
+        const dadosLabel3 = {
+            name: "Quantidade OS Fora do Prazo",
+            data: responseData.reduce((tot, arr) => tot + arr.qtdOSForaPrazo, 0)
+        }
+        const dadosLabel4 = {
+            name: "Custo Medio",
+            data: responseData.reduce((tot, arr) => tot + arr.custoMedio, 0)
+        }
+        const dadosLabel5 = {
+            name: "Distancia Media",
+            data: responseData.reduce((tot, arr) => tot + arr.distanciaMedia, 0)
+        }
+        const dadosLabel6 = {
+            name: "Tempo Medio",
+            data: responseData.reduce((tot, arr) => tot + arr.tempoMedio, 0)
+        }
+
+        setOrdemServicos([dadosLabel1, dadosLabel2, dadosLabel3, dadosLabel4, dadosLabel5, dadosLabel6])
+        setOrdemServicosTop(ordemServicos.slice(0, 3))
+        // console.log(ordemServicosTop)
+        setOrdemServicosBottom(ordemServicos.slice(-3))
+        // console.log(ordemServicosBottom)
+
+
+
+        // console.log(ordemServicos)
+    }, [responseData])
+
+    if (loading === true) {
         return (
             <Loading />
         )
 
     }
+
     if (responseData.length === 0 && loading === false) {
         return (
             <div className="content">
@@ -124,6 +261,46 @@ export default function Os() {
                         </div>
                     )
                 })}
+            </div>
+            <div className="content-top" >
+                <div className="twoinone">
+                    <div className="labelos">
+                        <span className="valor">Bairros mais afetados</span>
+                        <br></br><br></br>
+                        {bairrosAfetados.map((bairroAfetado) => {
+                            return (
+                                <div key={bairroAfetado.index}>
+                                    <span>{bairrosAfetados.indexOf(bairroAfetado) + 1}-{bairroAfetado.regiao}→{bairroAfetado.quantidadeOs}x</span>
+                                </div>
+                            )
+                        })}
+
+                    </div>
+                </div>
+                <div className="twoinone">
+                    <div className="labelos">
+                        <span className="valor">Top 5 Materias gastos</span>
+                        <br></br><br></br>
+                        {materiaisGastos.map((materialGasto) => {
+                            return (
+                                <div key={materialGasto.material}>
+                                    <span>{materiaisGastos.indexOf(materialGasto) + 1}-{materialGasto.material}→{materialGasto.quantidadeMaterial}Und</span>
+                                </div>
+                            )
+                        })}
+
+                    </div>
+                </div>
+                <div className="twoinone">
+                    <div className="labelos">
+                        <label>Economia gerada através do uso da plataformacGIS Saneamento OS Online</label>
+                        <div>
+                            <span className="valor">{((responseData4).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))}</span>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     )

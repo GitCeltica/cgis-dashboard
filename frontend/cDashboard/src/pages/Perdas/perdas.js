@@ -34,12 +34,12 @@ export default function Perdas() {
             })
 
             setResponseData(response.data);
-            console.log(responseData.map(index => {
-                return {
-                    index: index,
-                    valor: index.tempoMedioCorrecao < 0 ? index.tempoMedioCorrecao : null
-                }
-            }))
+            // console.log(responseData.map(index => {
+            //     return {
+            //         index: index,
+            //         valor: index.tempoMedioCorrecao < 0 ? index.tempoMedioCorrecao : null
+            //     }
+            // }))
             // if(responseData.length === 0){
             //     setTimeout(()=> {
             //         setLoading(false);
