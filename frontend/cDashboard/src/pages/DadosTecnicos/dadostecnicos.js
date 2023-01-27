@@ -130,7 +130,10 @@ export default function DadosTecnicos() {
         for (var i = 0; i < orderByDiametro.length; i++) {
 
             if (!diametrosArray.includes(orderByDiametro[i].diametro)) {
-                diametrosArray.push(orderByDiametro[i].diametro)
+                if (responseData[i].tipoDado === 'A' )
+                {
+                    diametrosArray.push(orderByDiametro[i].diametro)
+                }
             }
         }
 
@@ -162,9 +165,14 @@ export default function DadosTecnicos() {
 
         for (var i = 0; i < responseData.length; i++) {
             if (!materialArray.includes(responseData[i].material)) {
-                materialArray.push(responseData[i].material)
+                if (responseData[i].tipoDado === 'A' )
+                {
+                    materialArray.push(responseData[i].material)
+                }
             }
         }
+
+        materialArray = materialArray.sort()
 
         for (var i = 0; i < materialArray.length; i++) {
             materialValores.push({ name: materialArray[i], valor: 0 })
@@ -195,10 +203,15 @@ export default function DadosTecnicos() {
 
         for (var i = 0; i < responseData.length; i++) {
             if (!tiposArray.includes(responseData[i].tipo)) {
-                tiposArray.push(responseData[i].tipo)
+
+                if (responseData[i].tipoDado === 'A')
+                {
+                    tiposArray.push(responseData[i].tipo)
+                }
             }
         }
 
+        tiposArray = tiposArray.sort()
         for (var i = 0; i < tiposArray.length; i++) {
             tipoValores.push({ name: tiposArray[i], valor: 0 })
         }
@@ -221,14 +234,25 @@ export default function DadosTecnicos() {
 
 
 
-        let tipoValoresE = [{ name: "AAB", valor: 0 }, { name: "AAT", valor: 0 }, { name: "ALI", valor: 0 }, { name: "DSC", valor: 0 }, { name: "RDA", valor: 0 }]
+        
         /*
         EXTENSAO POR DIAMETRO ESGOTO 
         */
         let diametroValoresEsgoto = []
+        let diametrosArrayEsgoto = []
 
-        for (var i = 0; i < diametrosArray.length; i++) {
-            diametroValoresEsgoto.push({ name: diametrosArray[i], valor: 0 })
+        for (var i = 0; i < orderByDiametro.length; i++) {
+
+            if (!diametrosArrayEsgoto.includes(orderByDiametro[i].diametro)) {
+                if (responseData[i].tipoDado === 'E' )
+                {
+                    diametrosArrayEsgoto.push(orderByDiametro[i].diametro)
+                }
+            }
+        }
+
+        for (var i = 0; i < diametrosArrayEsgoto.length; i++) {
+            diametroValoresEsgoto.push({ name: diametrosArrayEsgoto[i], valor: 0 })
         }
 
         for (var i = 0; i < dadosEsgoto.length; i++) {
@@ -255,10 +279,20 @@ export default function DadosTecnicos() {
         */
 
         let materialValoresEsgoto = []
+        let materialArrayEsgoto = []
 
+        for (var i = 0; i < responseData.length; i++) {
+            if (!materialArrayEsgoto.includes(responseData[i].material)) {
+                if (responseData[i].tipoDado === 'E' )
+                {
+                    materialArrayEsgoto.push(responseData[i].material)
+                }
+            }
+        }
 
-        for (var i = 0; i < materialArray.length; i++) {
-            materialValoresEsgoto.push({ name: materialArray[i], valor: 0 })
+        materialArrayEsgoto = materialArrayEsgoto.sort()
+        for (var i = 0; i < materialArrayEsgoto.length; i++) {
+            materialValoresEsgoto.push({ name: materialArrayEsgoto[i], valor: 0 })
         }
 
         for (var i = 0; i < dadosEsgoto.length; i++) {
@@ -281,9 +315,20 @@ export default function DadosTecnicos() {
         */
 
         let tipoValoresEsgoto = []
+        let tiposArrayEsgoto = []
+        for (var i = 0; i < responseData.length; i++) {
+            if (!tiposArrayEsgoto.includes(responseData[i].tipo)) {
 
-        for (var i = 0; i < tiposArray.length; i++) {
-            tipoValoresEsgoto.push({ name: tiposArray[i], valor: 0 })
+                if (responseData[i].tipoDado === 'E')
+                {
+                    tiposArrayEsgoto.push(responseData[i].tipo)
+                }
+            }
+        }
+
+        tiposArrayEsgoto = tiposArrayEsgoto.sort()
+        for (var i = 0; i < tiposArrayEsgoto.length; i++) {
+            tipoValoresEsgoto.push({ name: tiposArrayEsgoto[i], valor: 0 })
         }
 
         for (var i = 0; i < dadosEsgoto.length; i++) {
