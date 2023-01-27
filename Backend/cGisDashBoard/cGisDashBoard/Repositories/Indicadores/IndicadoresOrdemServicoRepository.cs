@@ -28,7 +28,7 @@ namespace cGisDashBoard.Repositories.Indicadores
 
             var anos = await _context.ListaAno.FromSqlRaw($"select distinct Ano from IndicadoresOrdemServico where cidadeID = {cidadeId}").ToListAsync();
 
-            var naturezas = await _context.Naturezas.FromSqlRaw($"select Natureza from IndicadoresOrdemServico where cidadeID = {cidadeId}").ToListAsync();
+            var naturezas = await _context.Naturezas.FromSqlRaw($"select distinct Natureza from IndicadoresOrdemServico where cidadeID = {cidadeId}").ToListAsync();
 
             var equipes = await _context.Equipes.FromSqlRaw($"select distinct Equipe from IndicadoresOrdemServico where cidadeID = {cidadeId}").ToListAsync();
 
