@@ -8,7 +8,6 @@ import noData from "../../assets/nodatamsg.svg";
 
 export default function Os() {
     const [loading, setLoading] = useState(true);
-    const [ordemServicos, setOrdemServicos] = useState([]);
     const [responseData, setResponseData] = useState([]);
     const [responseData2, setResponseData2] = useState([]);
     const [responseData3, setResponseData3] = useState([]);
@@ -22,7 +21,7 @@ export default function Os() {
     const filtro = useSelector(state => state.data);
 
     useEffect(() => {
-        console.log(filtro)
+        // console.log(filtro)
         setLoading(true)
     }, [filtro])
 
@@ -103,15 +102,9 @@ export default function Os() {
             data: responseData.reduce((tot, arr) => tot + arr.tempoMedio, 0)
         }
 
-        setOrdemServicos([dadosLabel1, dadosLabel2, dadosLabel3, dadosLabel4, dadosLabel5, dadosLabel6])
-        setOrdemServicosTop(ordemServicos.slice(0, 3))
-        // console.log(ordemServicosTop)
-        setOrdemServicosBottom(ordemServicos.slice(-3))
-        // console.log(ordemServicosBottom)
+        setOrdemServicosTop([dadosLabel1, dadosLabel2, dadosLabel3])
+        setOrdemServicosBottom([dadosLabel4, dadosLabel5, dadosLabel6])
 
-
-
-        // console.log(ordemServicos)
     }, [responseData])
 
 

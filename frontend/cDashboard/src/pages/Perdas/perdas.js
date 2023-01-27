@@ -117,8 +117,8 @@ export default function Perdas() {
             // data.data.reduce((acc, d) => acc + d.valor, 0 )
         };
 
-        console.log('dadoGrafico3')
-        console.log(dadoGrafico3)
+        // console.log('dadoGrafico3')
+        // console.log(dadoGrafico3)
         setPerdas([dadoGrafico1, dadoGrafico2, dadoGrafico3]);
 
     }, [responseData])

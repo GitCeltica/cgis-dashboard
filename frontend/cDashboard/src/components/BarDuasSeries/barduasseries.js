@@ -6,7 +6,7 @@ import { BarChart, ResponsiveContainer, Bar, XAxis, YAxis, CartesianGrid, Toolti
 export default function BarDuasSeries(dados) {
 
   const [selectedData, setSelectedData] = useState(false);
-  console.log(dados)
+  // console.log(dados)
 
   const data = (dados.dados)
 

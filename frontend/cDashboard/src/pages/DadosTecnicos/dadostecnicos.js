@@ -27,14 +27,14 @@ export default function DadosTecnicos() {
     const filtro = useSelector(state => state.data)
 
     useEffect(() => {
-        console.log(filtro)
+        // console.log(filtro)
         setLoading(true)
     }, [filtro])
 
     useEffect(() => {
         async function getDadosFiltro() {
             //2021 mes 3
-            console.log(filtro)
+            // console.log(filtro)
             const response = await api.post('dadostecnicos/parametros', {
                 CidadeId: 10,
                 Mes: parseInt(filtro.mes),

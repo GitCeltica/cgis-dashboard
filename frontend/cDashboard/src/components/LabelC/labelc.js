@@ -1,7 +1,7 @@
 export default function LabelC (dados){
 
     const data = (dados.dados);
-    console.log (data)
+    // console.log (data)
 
     return(
         <div className="labelc">
