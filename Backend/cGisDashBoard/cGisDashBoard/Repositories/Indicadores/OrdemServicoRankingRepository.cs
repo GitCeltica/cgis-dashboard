@@ -152,7 +152,7 @@ namespace cGisDashBoard.Repositories.Indicadores
         {
             List<EconomiaOrdemServico> resultado = new List<EconomiaOrdemServico>();
 
-            var dados = await _context.EconomiaPorOrdemServico.FromSqlRaw("select CidadeId, Sum([QtdOS])*2.68 as 'ValorEconomia', Natureza, Equipe, Mes, Ano from [cGISDashboard].[dbo].[IndicadoresOrdemServico]\r\n group by CidadeId, Natureza, Equipe, Mes, Ano;").ToListAsync();
+            var dados = await _context.EconomiaPorOrdemServico.FromSqlRaw("select CidadeId, Sum([QtdOS])*2.68 as 'ValorEconomia', Natureza, Equipe, Mes, Ano from [cGISDashboard].[dbo].[IndicadoresOrdemServico] group by CidadeId, Natureza, Equipe, Mes, Ano;").ToListAsync();
 
 
             if (parametros.CidadeId != 0)
