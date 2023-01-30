@@ -56,7 +56,7 @@ export default function Filtro(props, start) {
                 dispatch({ type: 'CHANGE_FILTRO', data: { ano: anoInicial, bairro: selectedBairro, mes: selectedMes, equipe: selectedEquipe, natureza: selectedNatureza } })
             }
         })
-    }, [history])
+    }, [loading])
 
 
 
@@ -73,18 +73,18 @@ export default function Filtro(props, start) {
             setLoading(true);
 
 
-            history.listen((location) => {
+            // history.listen((location) => {
 
-                if (location.pathname === '/perdas') {
-                    setCaminho('perdas/Filtro/10');
-                }
-                else if (location.pathname === '/dadostecnicos') {
-                    setCaminho('dadostecnicos/Filtro/10')
-                }
-                else if (location.pathname === '/os') {
-                    setCaminho('ordemservicos/Filtro/10')
-                }
-            })
+            //     if (location.pathname === '/perdas') {
+            //         setCaminho('perdas/Filtro/10');
+            //     }
+            //     else if (location.pathname === '/dadostecnicos') {
+            //         setCaminho('dadostecnicos/Filtro/10')
+            //     }
+            //     else if (location.pathname === '/os') {
+            //         setCaminho('ordemservicos/Filtro/10')
+            //     }
+            // })
             // console.log(caminho)
 
             const response = await api.get(`${caminho}`);
@@ -109,8 +109,6 @@ export default function Filtro(props, start) {
                 setNatureza(response.data.natureza.map(label => ({ label })))
 
             }
-
-
 
             setLoading(false)
         }
