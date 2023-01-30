@@ -91,15 +91,15 @@ export default function Os() {
         }
         const dadosLabel4 = {
             name: "Custo Medio",
-            data: responseData.reduce((tot, arr) => tot + arr.custoMedio, 0)
+            data: parseFloat((responseData.reduce((tot, arr) => tot + arr.custoMedio, 0)/responseData.length).toFixed(2) )
         }
         const dadosLabel5 = {
             name: "Distancia Media",
-            data: responseData.reduce((tot, arr) => tot + arr.distanciaMedia, 0)
+            data: parseFloat((responseData.reduce((tot, arr) => tot + arr.distanciaMedia, 0)/responseData.length).toFixed(2) )
         }
         const dadosLabel6 = {
             name: "Tempo Medio",
-            data: responseData.reduce((tot, arr) => tot + arr.tempoMedio, 0)
+            data: parseFloat((responseData.reduce((tot, arr) => tot + arr.tempoMedio, 0)/responseData.length).toFixed(2) )
         }
 
         setOrdemServicosTop([dadosLabel1, dadosLabel2, dadosLabel3])
